@@ -1,0 +1,51 @@
+export default [
+  {
+    key:'getStarted',
+    label:'使用',
+    children:[
+      {
+        key:'started',
+        label:'快速上手',
+        path:'/Docs/started'
+      }
+    ]
+  },
+  {
+    key:'component',
+    label:'组件',
+    children:[
+      {
+        key:'base',
+        label:'基础',
+        children:[
+          {
+            key:'icon',
+            label:'图标',
+            path:"/docs/icon"
+          },
+          {
+            key:'button',
+            label:'按钮',
+            path:"/docs/button"
+          }
+        ]
+      },
+      {
+        key:'form',
+        label:'表单',
+        children:[
+          {
+            key:'input',
+            label:'Input 输入框',
+            path:"/docs/input"
+          },
+          {
+            key:'select',
+            label:'Select 选择框',
+            path:"/docs/select"
+          }
+        ]
+      }
+    ]
+  }
+]
