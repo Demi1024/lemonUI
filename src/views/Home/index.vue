@@ -12,6 +12,7 @@
         </div>
       </div>
     </section>
+    <footer>技术支持</footer>
   </div>
 </template>
 <script>
@@ -29,7 +30,7 @@ export default {
   flex-direction: column;
   height: 100vh;
   .intro{
-    background: lightpink;
+    background: linear-gradient(to right, #36D1DC , #5B86E5);
     max-width: 1000px;
     width: 100%;
     padding: 100px 0;
@@ -38,6 +39,12 @@ export default {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+  }
+  > footer{
+    max-width: 1000px;
+    width: 100%;
+    margin:0 auto;
+    text-align: center;
   }
 }
 </style>

@@ -29,6 +29,7 @@ export default {
     display: flex;
     > .content{
       flex-grow: 1;
+      padding: 20px;
     }
   }
 }
