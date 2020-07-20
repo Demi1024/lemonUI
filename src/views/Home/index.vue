@@ -6,7 +6,7 @@
         <h1>柠檬UI</h1>
         <p>基于VUE3和TypeScript的轻量级UI框架</p>
         <div class="links">
-          <router-link to="/docs">查看文档</router-link>
+          <router-link to="/docs/started">查看文档</router-link>
           |
           <a href="https://github.com">Github</a>
         </div>
@@ -17,10 +17,17 @@
 </template>
 <script>
 import TopNav from '../../components/TopNav/index.vue'
+import {onMounted} from 'vue'
 export default {
   name:'home',
   components: {
     TopNav
+  },
+  setup(){
+    // 生命周期
+    onMounted(()=>{
+      document.title="柠檬UI "
+    })
   }
 }
 </script>

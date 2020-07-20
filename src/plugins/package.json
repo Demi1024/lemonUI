@@ -1,0 +1,12 @@
+{
+  "name": "lemon-design",
+  "version": "0.0.1",
+  "description": "This is a lightweight UI component library based on Vue3.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Demi Wang",
+  "license": "MIT"
+}

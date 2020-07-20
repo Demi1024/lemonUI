@@ -6,7 +6,7 @@ export default [
       {
         key:'started',
         label:'快速上手',
-        path:'/Docs/started'
+        path:'/docs/started'
       }
     ]
   },
