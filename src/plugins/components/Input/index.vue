@@ -7,24 +7,34 @@
  */
 
 <template>
-<div class="field">
-  <div class="control">
-    <input class="input"/>
+  <div :class="['control',{small:Size == 'small'},{large:Size == 'large'}]">
+    <input :class="['input',{small:Size == 'small'},{large:Size == 'large'}]"
+      :placeholder=Placeholder
+    />
   </div>
-</div>
-
 </template>
 <script>
 import '../../style/index.scss'
+import {ref} from 'vue'
 export default {
-  name:'Input'
+  name:'Input',
+  props:{
+    size: {
+      type: String,
+      default: 'normal'
+    },
+    placeholder: String
+  },
+  setup(props){
+    const Size = ref(props.size)
+    const Placeholder = ref(props.placeholder)
+    console.log(Size)
+    return{Size,Placeholder}
+  }
 }
 </script>
 <style lang="scss" scoped>
 
-.field:not(:last-child) {
-    margin-bottom: .75rem;
-}
 .control{
     box-sizing: border-box;
     clear: both;
@@ -38,6 +48,16 @@ export default {
   }
   .input:active, .input:focus{
     outline: none;
+  }
+  .input:focus{
+    border-color: #3273dc;
+    box-shadow: 0 0 0 0.125em rgba(50,115,220,.25);
+  }
+  .small.input{
+    font-size: 0.8em;
+  }
+  .large.input{
+    font-size: 1.5em;
   }
 }
 

@@ -1,14 +1,22 @@
 <template>
-  <div class="page">
-    这里是输入框介绍页面
-    <div class="intro">
+  <article class="page">
+    <h2>Input输入框</h2>
+    <div class="part-view">
       普通用法
-      <de-input></de-input>
+      <div class="example-component">
+        <de-input placeholder="请输入"></de-input>
+      </div>
     </div>
-    <div>
-      自定义边框颜色
+    <div class="part-view">
+      不同尺寸
+      <div class="example-component">
+        <de-input size="small" 
+        placeholder="small"></de-input>
+        <de-input size="normal" placeholder="normal"></de-input>
+        <de-input size="large" placeholder="large"></de-input>
+      </div>
     </div>
-  </div>
+  </article>
 </template>
 <script>
 export default {
@@ -17,8 +25,12 @@ export default {
 </script>
 <style lang="scss" scoped>
   .page{
-    .intro{
+    .part-view{
+      width: 100%;
+    }
+    .example-component{
       width: 50%;
+      padding: 20px;
     }
   }
 </style>
