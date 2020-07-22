@@ -16,6 +16,12 @@
         <de-input size="large" placeholder="large"></de-input>
       </div>
     </div>
+    <div class="part-view">
+      可清空
+      <div class="example-component">
+        <de-input placeholder="请输入" clearable></de-input>
+      </div>
+    </div>
   </article>
 </template>
 <script>

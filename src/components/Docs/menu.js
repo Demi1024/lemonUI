@@ -20,12 +20,12 @@ export default [
         children:[
           {
             key:'icon',
-            label:'图标',
+            label:'Icon 图标',
             path:"/docs/icon"
           },
           {
             key:'button',
-            label:'按钮',
+            label:'Button 按钮',
             path:"/docs/button"
           }
         ]
