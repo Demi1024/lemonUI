@@ -1,18 +1,20 @@
 <template>
   <div class="home">
-    <top-nav></top-nav>
-    <section class="banner">
-      <div class="intro">
-        <h1>柠檬UI</h1>
-        <p>基于VUE3和TypeScript的轻量级UI框架</p>
-        <div class="links">
-          <router-link to="/docs/started">查看文档</router-link>
-          |
-          <a href="https://github.com">Github</a>
+    <main>
+      <top-nav></top-nav>
+      <section class="banner">
+        <div class="intro">
+          <h1>柠檬UI</h1>
+          <p>基于VUE3和TypeScript的轻量级UI框架</p>
+          <div class="links">
+            <router-link to="/docs/started">查看文档</router-link>
+            |
+            <a href="https://github.com">Github</a>
+          </div>
         </div>
-      </div>
-    </section>
-    <footer>技术支持</footer>
+      </section>
+    </main>
+    <footer>技术支持By Demi</footer>
   </div>
 </template>
 <script>
@@ -36,6 +38,10 @@ export default {
   display: flex;
   flex-direction: column;
   height: 100vh;
+  > main{
+    flex: 1 1 auto;
+    overflow-y: auto;
+  }
   .intro{
     background: linear-gradient(to right, #36D1DC , #5B86E5);
     max-width: 1000px;
@@ -56,6 +62,7 @@ export default {
     }
   }
   > footer{
+    flex: 0 0 auto;
     max-width: 1000px;
     width: 100%;
     margin:0 auto;
