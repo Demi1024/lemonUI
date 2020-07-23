@@ -40,12 +40,20 @@ export default {
     background: linear-gradient(to right, #36D1DC , #5B86E5);
     max-width: 1000px;
     width: 100%;
-    padding: 100px 0;
+    padding: 150px 0;
     margin:0 auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    h1{
+      font-size: 3rem;
+      color: #fbfd8a;
+    }
+    p{
+      font-size: 2rem;
+      color:#ffffff;
+    }
   }
   > footer{
     max-width: 1000px;

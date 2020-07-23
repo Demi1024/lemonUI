@@ -25,18 +25,8 @@
   </article>
 </template>
 <script>
+import '../../styles/components/docs.scss'
 export default {
   name:'DeInput'
 }
 </script>
-<style lang="scss" scoped>
-  .page{
-    .part-view{
-      width: 100%;
-    }
-    .example-component{
-      width: 50%;
-      padding: 20px;
-    }
-  }
-</style>

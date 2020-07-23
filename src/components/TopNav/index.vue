@@ -4,7 +4,7 @@
       <router-link to="/">柠檬UI</router-link>
     </div>
     <ul class="menu">
-      <li><router-link to="/docs">文档</router-link></li>
+      <li><router-link to="/docs/started">文档</router-link></li>
       <li>语言</li>
     </ul>
   </nav>
@@ -17,6 +17,9 @@ nav{
   > .logo{
     max-width: 6em;
     margin-right: auto;
+    a{
+      color:#515a6e;
+    }
   }
   > .menu{ 
     display: flex;

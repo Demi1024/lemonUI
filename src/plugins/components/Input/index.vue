@@ -8,8 +8,8 @@
 
 <template>
   <div :class="['control',{small:Size == 'small'},{large:Size == 'large'}]">
+    <slot></slot>
     <i v-show="Clearable && inputValue" v-on:click="clearValue" class="input-icon clear icon"></i>
-    
     <input v-model="inputValue" :class="['input',{small:Size == 'small'},{large:Size == 'large'}]"
       :placeholder=Placeholder
     />
