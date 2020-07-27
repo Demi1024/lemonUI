@@ -1,6 +1,6 @@
 @import 'base.scss';
 
-.button, .file-cta, .file-name, .input, .pagination-ellipsis, .pagination-link, .pagination-next, .pagination-previous, .select select, .taginput .taginput-container.is-focusable, .textarea {
+.de-button, .file-cta, .file-name, .input, .pagination-ellipsis, .pagination-link, .pagination-next, .pagination-previous, .select select, .textarea {
   -moz-appearance: none;
   -webkit-appearance: none;
   align-items: center;
@@ -16,7 +16,7 @@
   position: relative;
   vertical-align: top;
 }
-.input, .select select, .taginput .taginput-container.is-focusable, .textarea {
+.input, .select select, .textarea {
   background-color: #fff;
   border-color: #dbdbdb;
   border-radius: 4px;

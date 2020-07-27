@@ -1,0 +1,16 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "15838589",
+      "name": "delete-filling",
+      "font_class": "delete-filling",
+      "unicode": "e689",
+      "unicode_decimal": 59017
+    }
+  ]
+}

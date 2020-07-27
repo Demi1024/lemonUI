@@ -1,12 +1,12 @@
 <template>
-  <button :class="classes">
+  <button :class="classes" type='button'>
     <slot></slot>
   </button>
 </template>
 <script>
 import '../../style/index.scss'
 import {computed} from 'vue'
-const prefixCls = 'button'
+const prefixCls = 'de-button'
 export default{
   name:'Button',
   props:{
@@ -28,7 +28,8 @@ export default{
 }
 </script>
 <style lang="scss" scoped>
-.button{
+.de-button{
+  transition: background .2s linear,color .2s linear;
   &-default{
     color:#515a6e;
     background: #ffffff;
@@ -47,13 +48,13 @@ export default{
     color:#ffffff;
     background: #016ab4;
     &:hover{
-      background:#1371b4;
+      background:#1077bf;
       color:#ffffff;
-      border-color: #016ab4;
+      border-color: #1077bf;
     }
     &:focus{
       outline: none;
-      border-color: #016ab4;
+      border-color: #1077bf;
     }
   }
   &-dashed{
@@ -85,52 +86,52 @@ export default{
     color:#ffffff;
     background: #01a9b4;
     &:hover{
-      background:#01a9b4;
+      background:#07c2ce;
       color:#ffffff;
-      border-color: #01a9b4;
+      border-color: #07c2ce;
     }
     &:focus{
       outline: none;
-      border-color: #01a9b4;
+      border-color: #07c2ce;
     }
   }
   &-success{
     color:#ffffff;
     background: #17c123;
     &:hover{
-      background:#17c123;
+      background:#19cd26;
       color:#ffffff;
-      border-color: #17c123;
+      border-color: #19cd26;
     }
     &:focus{
       outline: none;
-      border-color: #17c123;
+      border-color: #19cd26;
     }
   }
   &-warning{
     color:#ffffff;
     background: #df9d0e;
     &:hover{
-      background:#df9d0e;
+      background:#e9a510;
       color:#ffffff;
-      border-color: #df9d0e;
+      border-color: #e9a510;
     }
     &:focus{
       outline: none;
-      border-color: #df9d0e;
+      border-color: #e9a510;
     }
   }
   &-error{
     color:#ffffff;
     background: #f2380d;
     &:hover{
-      background:#f2380d;
+      background:#f8451b;
       color:#ffffff;
-      border-color: #f2380d;
+      border-color: #f8451b;
     }
     &:focus{
       outline: none;
-      border-color: #f2380d;
+      border-color: #f8451b;
     }
   }
 }

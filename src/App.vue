@@ -5,7 +5,13 @@
 </template>
 
 <script>
+import {onMounted} from 'vue'
 export default {
-  name: 'App'
+  name: 'App',
+  setup(){
+    onMounted(()=>{
+      document.title="Lemon UI"
+    })
+  }
 }
 </script>
