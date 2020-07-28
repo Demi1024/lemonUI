@@ -9,7 +9,9 @@
 <template>
   <div :class="['control',{small:Size == 'small'},{large:Size == 'large'}]">
     <slot></slot>
-    <i v-show="Clearable && inputValue" v-on:click="clearValue" class="input-icon clear icon"></i>
+    <Icon v-show="Clearable && inputValue" 
+      type="delete-round"
+      v-on:click="clearValue" class="input-icon"></Icon>
     <input v-model="inputValue" :class="['input',{small:Size == 'small'},{large:Size == 'large'}]"
       :placeholder=Placeholder
     />
@@ -18,8 +20,12 @@
 <script>
 import '../../style/index.scss'
 import {ref} from 'vue'
+import Icon from '../Icon/index.vue'
 export default {
   name:'Input',
+  components:{
+    Icon
+  },
   props:{
     size: {
       type: String,
@@ -44,15 +50,6 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-@font-face {
-  font-family: 'iconfont';  /* project id 1961129 */
-  src: url('//at.alicdn.com/t/font_1961129_qkf7lt2691.eot');
-  src: url('//at.alicdn.com/t/font_1961129_qkf7lt2691.eot?#iefix') format('embedded-opentype'),
-  url('//at.alicdn.com/t/font_1961129_qkf7lt2691.woff2') format('woff2'),
-  url('//at.alicdn.com/t/font_1961129_qkf7lt2691.woff') format('woff'),
-  url('//at.alicdn.com/t/font_1961129_qkf7lt2691.ttf') format('truetype'),
-  url('//at.alicdn.com/t/font_1961129_qkf7lt2691.svg#iconfont') format('svg');
-}
 .control{
     box-sizing: border-box;
     clear: both;
@@ -78,9 +75,6 @@ export default {
   .large.input{
     font-size: 1.5em;
   }
-  .clear::before{
-    content: "\e689";
-  }
   .input-icon{
     display: inline-block;
     width: 1em;
@@ -94,10 +88,6 @@ export default {
     position: absolute;
     right: 0.5em;
     z-index: 3;
-  }
-  .icon{
-    font-family: "iconfont";
-    display: inline-block;
   }
 }
 

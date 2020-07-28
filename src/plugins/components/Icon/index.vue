@@ -31,10 +31,18 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-
+@font-face {
+  font-family: 'iconfont';  /* project id 1961129 */
+  src: url('//at.alicdn.com/t/font_1961129_vu9kkpqvu3l.eot');
+  src: url('//at.alicdn.com/t/font_1961129_vu9kkpqvu3l.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_1961129_vu9kkpqvu3l.woff2') format('woff2'),
+  url('//at.alicdn.com/t/font_1961129_vu9kkpqvu3l.woff') format('woff'),
+  url('//at.alicdn.com/t/font_1961129_vu9kkpqvu3l.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_1961129_vu9kkpqvu3l.svg#iconfont') format('svg');
+}
 .de-icon{
   display: inline-block;
-  // font-family: Ionicons;
+  font-family: iconfont;
   speak: none;
   font-style: normal;
   font-weight: 400;
@@ -46,5 +54,20 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   vertical-align: -.125em;
   text-align: center;
+  &-delete-round::before{
+    content: '\e602';
+  }
+  &-up-arrow:before{
+    content: '\e605';
+  }
+  &-down-arrow:before{
+    content: '\e601';
+  }
+  &-left-arrow:before{
+    content: '\e603';
+  }
+  &-right-arrow:before{
+    content: '\e604';
+  }
 }
 </style>
