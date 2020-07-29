@@ -9,21 +9,23 @@
           <div class="links">
             <router-link to="/docs/started">查看文档</router-link>
             |
-            <a href="https://github.com">Github</a>
+            <a href="https://github.com/Demi1024/lemonUI">Github</a>
           </div>
         </div>
       </section>
     </main>
-    <footer>技术支持By Demi</footer>
+    <Footer></Footer>
   </div>
 </template>
 <script>
-import TopNav from '../../components/TopNav/index.vue'
+import TopNav from '/src/components/TopNav/index.vue'
+import Footer from '/src/components/Footer/index.vue'
 import {onMounted} from 'vue'
 export default {
   name:'home',
   components: {
-    TopNav
+    TopNav,
+    Footer
   },
   setup(){
     // 生命周期
@@ -60,13 +62,22 @@ export default {
       font-size: 2rem;
       color:#ffffff;
     }
-  }
-  > footer{
-    flex: 0 0 auto;
-    max-width: 1000px;
-    width: 100%;
-    margin:0 auto;
-    text-align: center;
+    .links{
+      margin: 20px 0;
+      a{
+        margin:0 10px;
+        background:#ffffff;
+        display: inline-block;
+        $h:30px;
+        height:$h;
+        line-height: $h;
+        border-radius: $h/2;
+        padding:0 10px;
+        &:active{
+          color:#36D1DC;
+        }
+      }
+    }
   }
 }
 </style>

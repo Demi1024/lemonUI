@@ -4,18 +4,25 @@
     <main>
       <DocAside></DocAside>
       <div class="content">
-        <router-view></router-view>
+        <div class="pagebox">
+          <div class="pages">
+            <router-view></router-view>
+          </div>
+          <Footer></Footer>
+        </div>
       </div>
     </main>
   </div>
 </template>
 <script>
-import TopNav from '../../components/TopNav/index.vue'
-import DocAside from '../../components/Docs/DocAside.vue'
+import TopNav from '/src/components/TopNav/index.vue'
+import Footer from '/src/components/Footer/index.vue'
+import DocAside from '/src/components/Docs/DocAside.vue'
 export default {
   components: {
     TopNav,
-    DocAside
+    DocAside,
+    Footer
   }
 }
 </script>
@@ -29,7 +36,15 @@ export default {
     display: flex;
     > .content{
       flex-grow: 1;
-      padding: 20px;
+      .pagebox{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        .pages{
+          flex-grow: 1;
+          padding: 20px;
+        }
+      }
     }
   }
 }
