@@ -17,9 +17,4 @@ const install = function(Vue) {
   
 };
 
-//判断是否是直接引入文件，不过是，就不要直接调用Vue.use();
-if (typeof window !== "undefined" && window.Vue) {
-  install(window.Vue);
-}
-
 export default install;
