@@ -11,9 +11,11 @@
 </template>
 <style lang="scss" scoped>
 nav{
+  position:relative;
   padding: 16px 0;
   border-bottom:1px solid #cccccc;
   display: flex;
+  z-index: 3;
   > .logo{
     max-width: 6em;
     margin-right: auto;

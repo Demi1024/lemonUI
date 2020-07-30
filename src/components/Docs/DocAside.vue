@@ -21,7 +21,11 @@ export default {
 </script>
 <style lang="scss" scoped>
 aside{
-    max-width: 200px;
-    width:100% ;
+  position: fixed;
+  top:0;
+  left:0;
+  padding-top:50px ;
+  max-width: 200px;
+  width:100% ;
   }
 </style>
