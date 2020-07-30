@@ -1,7 +1,7 @@
 <template>
   <nav>
-    <div class="logo" >
-      <p @click="toogleVisible">LOGO</p>
+    <span class="toggle"  @click="toogleVisible">LOGO</span>
+    <div class="logo">
       <router-link to="/">柠檬UI</router-link>
     </div>
     <ul class="menu">
@@ -30,7 +30,18 @@ nav{
   padding: 16px 0;
   border-bottom:1px solid #cccccc;
   display: flex;
+  justify-content: center;
+  align-items: center;
   z-index: 3;
+  > .toggle{
+    position: absolute;
+    left:16px;
+    top:50%;
+    transform: translateY(-50%);
+    width: 24px;
+    height:24px;
+    display: none;
+  }
   > .logo{
     max-width: 6em;
     margin-right: auto;
@@ -45,6 +56,17 @@ nav{
     flex-wrap: nowrap;
     >li{
       margin: 0 1em;
+    }
+  }
+  @media (max-width:600px) {
+    > .menu{
+      display: none;
+    }
+    > .logo{
+      margin:0 auto;
+    }
+    > .toggle{
+      display: inline-block;
     }
   }
 }

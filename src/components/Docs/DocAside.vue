@@ -1,5 +1,5 @@
 <template>
-  <aside v-if="asideVisible">
+  <aside class="aside" v-if="asideVisible">
     <menu-tree :Menu=Menu :selectdKey.sync="selectdKey"></menu-tree>
   </aside>
 </template>
@@ -21,12 +21,19 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-aside{
-  position: fixed;
-  top:0;
-  left:0;
-  padding-top:50px ;
+.aside{
   max-width: 200px;
   width:100% ;
+  background: #ffffff;
+  z-index: 2;
+  }
+  @media (max-width:600px) {
+    .aside{
+      position: fixed;
+      top:0;
+      left:0;
+      padding-top:50px ;
+    }
+
   }
 </style>

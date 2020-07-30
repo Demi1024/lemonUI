@@ -9,9 +9,9 @@
     </li>
   </ul>
 </template>
-<script>
+<script lang="ts">
 import {useRouter} from 'vue-router'
-import { onMounted,computed,watch,reactive } from 'vue'
+import { onMounted,computed,watch,reactive,inject,Ref } from 'vue'
 // import { ref, computed, Ref, watch, createComponent } from '@vue/composition-api'
 export default {
   name:'MenuTree',
@@ -20,6 +20,8 @@ export default {
     selectdKey:Array,
   },
   setup(props, { emit }) {
+    const asideVisible = inject<Ref<boolean>>('asideVisible')
+    const pageWidth = document.documentElement.clientWidth
     const router = useRouter()
     // 当前选中选项
     const chooseItems = computed(() => props.selectdKey)
