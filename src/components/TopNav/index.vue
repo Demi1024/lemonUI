@@ -1,6 +1,7 @@
 <template>
   <nav>
-    <div class="logo">
+    <div class="logo" >
+      <p @click="toogleVisible">LOGO</p>
       <router-link to="/">柠檬UI</router-link>
     </div>
     <ul class="menu">
@@ -9,6 +10,20 @@
     </ul>
   </nav>
 </template>
+<script lang="ts">
+import { inject, Ref } from 'vue'
+export default {
+  name:'TopNav',
+  setup(){
+    const asideVisible = inject<Ref<boolean>>('asideVisible')
+    console.log('topnav的可见性：'+asideVisible.value)
+    const toogleVisible = ()=>{
+      asideVisible.value = !asideVisible.value
+    }
+    return {toogleVisible}
+  }
+}
+</script>
 <style lang="scss" scoped>
 nav{
   position:relative;
