@@ -12,6 +12,9 @@
             <a href="https://github.com/Demi1024/lemonUI">Github</a>
           </div>
         </div>
+        <article>
+          there is some one who will use
+        </article>
       </section>
     </main>
     <Footer></Footer>
@@ -44,12 +47,14 @@ export default {
     flex: 1 1 auto;
     overflow-y: auto;
   }
+  .banner{
+    max-width: 1000px;
+    margin:0 auto;
+  }
   .intro{
     background: linear-gradient(to right, #36D1DC , #5B86E5);
-    max-width: 1000px;
     width: 100%;
     padding: 150px 0;
-    margin:0 auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
