@@ -61,6 +61,7 @@ export default {
     p{
       font-size: 2rem;
       color:#ffffff;
+      text-align: center;
     }
     .links{
       margin: 20px 0;
