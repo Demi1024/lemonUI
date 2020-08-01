@@ -8,12 +8,14 @@
 import Icon from "./components/Icon/index.vue";
 import Button from "./components/Button/index.vue";
 import Input from "./components/Input/index.vue";
+import Swicth from "./components/Swicth/index.vue";
 
 const install = function(Vue) {
   //注册组件
   Vue.component("de-icon", Icon);
   Vue.component("de-button", Button);
   Vue.component("de-input", Input);
+  Vue.component("de-switch", Swicth);
   
 };
 
