@@ -8,7 +8,7 @@
 import Icon from "./components/Icon/index.vue";
 import Button from "./components/Button/index.vue";
 import Input from "./components/Input/index.vue";
-import Swicth from "./components/Swicth/index.vue";
+import Swicth from "./components/Switch/index.vue";
 
 const install = function(Vue) {
   //注册组件

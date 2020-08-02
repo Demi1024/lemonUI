@@ -5,6 +5,7 @@ import DeIcon from '../components/Docs/DeIcon.vue'
 import DeButton from '../components/Docs/DeButton.vue'
 import DeInput from '../components/Docs/DeInput.vue'
 import DeSelect from '../components/Docs/DeSelect.vue'
+import DeSwitch from '../components/Docs/DeSwitch.vue'
 export default [
   {
     path:'/',
@@ -33,6 +34,10 @@ export default [
       {
         path:'select',
         component:DeSelect
+      },
+      {
+        path:'switch',
+        component:DeSwitch
       }
     ]
   }

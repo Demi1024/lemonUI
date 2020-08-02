@@ -43,6 +43,11 @@ export default [
             key:'select',
             label:'Select 选择框',
             path:"/docs/select"
+          },
+          {
+            key:'switch',
+            label:'Switch 开关',
+            path:"/docs/switch"
           }
         ]
       }
