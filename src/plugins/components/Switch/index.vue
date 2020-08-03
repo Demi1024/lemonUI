@@ -1,5 +1,9 @@
 <template>
-  <div :class="classes" @click="toogle"><span></span></div>
+  <div :class="classes" @click="toogle">
+    <span>
+    </span>
+    <slot></slot>
+  </div>
 </template>
 
 <script lang="ts">
@@ -24,7 +28,7 @@ import { ref, computed } from 'vue'
                 ]
             })
       const toogle = ()=>{
-        context.emit('input',!props.value)
+        context.emit('update:value',!props.value)
       }
       return{status,classes,toogle}
     }

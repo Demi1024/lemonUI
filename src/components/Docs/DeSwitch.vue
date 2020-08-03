@@ -2,7 +2,7 @@
   <article>
     <h2>Swicth 开关</h2>
     <div>
-      <de-switch :value="test" @input="changeValue"></de-switch>
+      <de-switch v-model:value="test"></de-switch>
     </div>
   </article>
 </template>
@@ -12,10 +12,7 @@ export default {
   name:'DeSwicth',
   setup(){
     const test = ref(true)
-    const changeValue = (event)=>{
-      test.value = event
-    }
-    return{test,changeValue}
+    return{test}
   }
 }
 </script>

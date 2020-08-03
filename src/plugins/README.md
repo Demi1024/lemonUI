@@ -23,3 +23,10 @@ const app = createApp(App)
 app.use(LemonUI)
 app.mount('#app')
 ```
+
+## 支持的组件
+
+Icon
+Button
+Switch
+Input
