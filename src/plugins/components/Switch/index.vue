@@ -1,9 +1,9 @@
 <template>
-  <div :class="classes" @click="toogle">
+  <button :class="classes" @click="toogle">
     <span>
     </span>
-    <slot></slot>
-  </div>
+  </button>
+  <slot></slot>
 </template>
 
 <script lang="ts">
@@ -45,14 +45,8 @@ import { ref, computed } from 'vue'
     background: #cccccc;
     border-radius: $height/2;
     border:none;
-    &-checked{
-      background: royalblue;
-      > span{
-        left: calc(100% - #{$height2} - 4px);
-      }
-    }
-  }
-  span{
+    transition: all 250ms linear;
+    > span{
       position: absolute;
       top:2px;
       left:2px;
@@ -61,6 +55,21 @@ import { ref, computed } from 'vue'
       height:$height2;
       border-radius: $height2/2;
       background:#ffffff;
-      transition: left 250ms linear;
+      transition: all 250ms linear;
     }
+    &-checked{
+      background: royalblue;
+      > span{
+        left: calc(100% - #{$height2} - 4px);
+      }
+    }
+    &:focus{
+      outline: none;
+      box-shadow: 0 0 0.5em #cccccc;
+    }
+    &-checked:focus{
+      box-shadow: 0 0 0.5em royalblue;
+    }
+  }
+  
 </style>

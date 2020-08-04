@@ -2,7 +2,8 @@
   <article>
     <h2>Swicth 开关</h2>
     <div>
-      <de-switch v-model:value="test"></de-switch>
+      <de-switch v-model:value="testDefault">{{testDefault}}</de-switch>
+      <de-switch v-model:value="testShowLabel">{{testShowLabel}}</de-switch>
     </div>
   </article>
 </template>
@@ -11,8 +12,9 @@ import { ref } from 'vue'
 export default {
   name:'DeSwicth',
   setup(){
-    const test = ref(true)
-    return{test}
+    const testDefault = ref(true)
+    const testShowLabel = ref(true)
+    return{testDefault,testShowLabel}
   }
 }
 </script>
