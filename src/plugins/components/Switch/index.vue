@@ -13,7 +13,15 @@ import { ref, computed } from 'vue'
     name: 'Swicth',
     props:{
       value:{
-        type:Boolean|| String,
+        type:Boolean,
+        default:false
+      },
+      trueValue:{
+        type:String || Number || Boolean,
+        default:true
+      },
+      falseValue:{
+        type:String || Number || Boolean,
         default:false
       }
     },
@@ -23,7 +31,7 @@ import { ref, computed } from 'vue'
                 return [
                     `${prefixCls}`,
                     {
-                      [`${prefixCls}-checked`]:props.value
+                      [`${prefixCls}-checked`]:props.value 
                     }
                 ]
             })

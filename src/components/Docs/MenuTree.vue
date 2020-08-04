@@ -51,6 +51,7 @@ export default {
   p{
     padding:10px 0;
     cursor: pointer;
+    transition: all 250ms linear;
   }
   .menu-checked{
     color:#01a9b4;
