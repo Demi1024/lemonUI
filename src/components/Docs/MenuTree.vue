@@ -52,6 +52,9 @@ export default {
     padding:10px 0;
     cursor: pointer;
     transition: all 250ms linear;
+    &:hover{
+      color:#01a9b4;
+    }
   }
   .menu-checked{
     color:#01a9b4;
