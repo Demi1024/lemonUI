@@ -2,8 +2,11 @@
   <button :class="classes" @click="toogle">
     <span>
     </span>
+    <span :class="innerClasses">
+        <slot name="open" v-if="currentValue.value === trueValue"></slot>
+        <slot name="close" v-if="currentValue.value === falseValue"></slot>
+    </span>
   </button>
-  <slot></slot>
 </template>
 
 <script lang="ts">
@@ -27,6 +30,8 @@ import { ref, computed, watch } from 'vue'
     },
     setup(props,context){
       const currentValue = computed(()=> ref(props.value))
+      const trueValue = props.trueValue
+      const falseValue = props.falseValue
       const classes = computed(()=>{
                 return [
                     `${prefixCls}`,
@@ -39,7 +44,7 @@ import { ref, computed, watch } from 'vue'
         const checked = currentValue.value.value === props.trueValue ? props.falseValue : props.trueValue;
         context.emit('update:value',checked)
       }
-      return{currentValue,classes,toogle}
+      return{currentValue,trueValue,falseValue,classes,toogle}
     }
   }
 </script>
