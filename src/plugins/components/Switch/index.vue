@@ -8,37 +8,38 @@
 
 <script lang="ts">
 const prefixCls = 'de-switch'
-import { ref, computed } from 'vue'
+import { ref, computed, watch } from 'vue'
   export default {
     name: 'Swicth',
     props:{
       value:{
-        type:Boolean,
+        type: [String, Number, Boolean],
         default:false
       },
       trueValue:{
-        type:String || Number || Boolean,
+        type: [String, Number, Boolean],
         default:true
       },
       falseValue:{
-        type:String || Number || Boolean,
+        type: [String, Number, Boolean],
         default:false
       }
     },
     setup(props,context){
-      const status = computed(()=> ref(props.value))
+      const currentValue = computed(()=> ref(props.value))
       const classes = computed(()=>{
                 return [
                     `${prefixCls}`,
                     {
-                      [`${prefixCls}-checked`]:props.value 
+                      [`${prefixCls}-checked`]:currentValue.value.value === props.trueValue,
                     }
                 ]
             })
       const toogle = ()=>{
-        context.emit('update:value',!props.value)
+        const checked = currentValue.value.value === props.trueValue ? props.falseValue : props.trueValue;
+        context.emit('update:value',checked)
       }
-      return{status,classes,toogle}
+      return{currentValue,classes,toogle}
     }
   }
 </script>

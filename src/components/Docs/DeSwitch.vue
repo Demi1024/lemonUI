@@ -7,7 +7,7 @@
     </div>
     <div>
       <p>自定义值</p>
-      <de-switch v-model:value="testShowLabel">{{testShowLabel}}</de-switch>
+      <de-switch v-model:value="testShowLabel" trueValue="yes" falseValue="no">{{testShowLabel}}</de-switch>
     </div>
   </article>
 </template>
@@ -17,7 +17,7 @@ export default {
   name:'DeSwicth',
   setup(){
     const testDefault = ref(false)
-    const testShowLabel = ref(true)
+    const testShowLabel = ref('yes')
     return{testDefault,testShowLabel}
   }
 }
