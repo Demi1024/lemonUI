@@ -2,7 +2,7 @@
   <button :class="classes" @click="toogle">
     <span>
     </span>
-    <span :class="innerClasses">
+    <span :class="innerClass">
         <slot name="open" v-if="currentValue.value === trueValue"></slot>
         <slot name="close" v-if="currentValue.value === falseValue"></slot>
     </span>
@@ -40,11 +40,14 @@ import { ref, computed, watch } from 'vue'
                     }
                 ]
             })
+      
+      
+      const innerClass = computed(()=> `${prefixCls}-inner`)
       const toogle = ()=>{
         const checked = currentValue.value.value === props.trueValue ? props.falseValue : props.trueValue;
         context.emit('update:value',checked)
       }
-      return{currentValue,trueValue,falseValue,classes,toogle}
+      return{currentValue,trueValue,falseValue,classes,innerClass,toogle}
     }
   }
 </script>
@@ -60,7 +63,8 @@ import { ref, computed, watch } from 'vue'
     border-radius: $height/2;
     border:none;
     transition: all 250ms linear;
-    > span{
+    &::after{
+      content: '';
       position: absolute;
       top:2px;
       left:2px;
@@ -73,7 +77,7 @@ import { ref, computed, watch } from 'vue'
     }
     &-checked{
       background: royalblue;
-      > span{
+      &::after{
         left: calc(100% - #{$height2} - 4px);
       }
     }
@@ -83,6 +87,9 @@ import { ref, computed, watch } from 'vue'
     }
     &-checked:focus{
       box-shadow: 0 0 0.5em royalblue;
+    }
+    &-inner{
+      color: #ffffff;
     }
   }
   

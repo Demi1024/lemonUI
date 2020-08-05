@@ -7,7 +7,7 @@
     </div>
     <div>
       <p>自定义值</p>
-      <de-switch v-model:value="testShowLabel" trueValue="yes" falseValue="no">{{testShowLabel}}</de-switch>
+      <de-switch v-model:value="testShowLabel" trueValue="yes" falseValue="no"></de-switch>{{testShowLabel}}
     </div>
     <div>
       <p>自定义文字</p>
