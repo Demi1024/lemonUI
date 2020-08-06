@@ -1,7 +1,5 @@
 <template>
   <button :class="classes" @click="toogle">
-    <span>
-    </span>
     <span :class="innerClass">
         <slot name="open" v-if="currentValue.value === trueValue"></slot>
         <slot name="close" v-if="currentValue.value === falseValue"></slot>
@@ -29,22 +27,21 @@ import { ref, computed, watch } from 'vue'
       }
     },
     setup(props,context){
-      const currentValue = computed(()=> ref(props.value))
+      // 计算属性会挂载ref的属性和effect
+      const currentValue = computed(()=> props.value)
       const trueValue = props.trueValue
       const falseValue = props.falseValue
       const classes = computed(()=>{
                 return [
                     `${prefixCls}`,
                     {
-                      [`${prefixCls}-checked`]:currentValue.value.value === props.trueValue,
+                      [`${prefixCls}-checked`]:currentValue.value === props.trueValue,
                     }
                 ]
             })
-      
-      
       const innerClass = computed(()=> `${prefixCls}-inner`)
       const toogle = ()=>{
-        const checked = currentValue.value.value === props.trueValue ? props.falseValue : props.trueValue;
+        const checked = currentValue.value === props.trueValue ? props.falseValue : props.trueValue;
         context.emit('update:value',checked)
       }
       return{currentValue,trueValue,falseValue,classes,innerClass,toogle}
