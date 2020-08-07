@@ -52,10 +52,10 @@ export default {
   padding-left: 20px;
   p{
     padding:10px 0;
-    cursor: pointer;
     color: #6b6969;
   }
   .menu-avilable{
+    cursor: pointer;
     color: #111111;
     transition: all 250ms linear;
     &:hover{
