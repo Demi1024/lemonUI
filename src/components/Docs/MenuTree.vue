@@ -1,13 +1,15 @@
 <template>
   <ul class="menu-list">
     <li class="menu-item" v-for="item in Menu" :key=item.key>
-      <p :class="{'menu-checked':item.key === chooseItems[0]}"
+      <p :class="[
+      {'menu-checked':item.key === chooseItems[0]},
+      {'menu-avilable':item.path}
+      ]"
         v-on:click="changeDocs(item.key,item.path)">{{item.label}}</p>
-      <div v-if="item.children">
-        <menu-tree :Menu="item.children" :selectdKey.sync="chooseItems"></menu-tree>
-      </div> 
+      <menu-tree v-if="item.children" :Menu="item.children" :selectdKey.sync="chooseItems"></menu-tree>
     </li>
   </ul>
+  
 </template>
 <script lang="ts">
 import {useRouter} from 'vue-router'
@@ -51,11 +53,16 @@ export default {
   p{
     padding:10px 0;
     cursor: pointer;
+    color: #6b6969;
+  }
+  .menu-avilable{
+    color: #111111;
     transition: all 250ms linear;
     &:hover{
       color:#01a9b4;
     }
   }
+  
   .menu-checked{
     color:#01a9b4;
     border-right: 3px solid #01a9b4;
