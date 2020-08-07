@@ -31,7 +31,7 @@ export default [
         ]
       },
       {
-        key:'layout',
+        key:'layouts',
         label:'布局',
         children:[
           {

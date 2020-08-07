@@ -38,6 +38,14 @@ export default [
       {
         path:'switch',
         component:DeSwitch
+      },
+      {
+        path:'grid',
+        component:DeSelect
+      },
+      {
+        path:'layout',
+        component:DeSelect
       }
     ]
   }
