@@ -31,6 +31,22 @@ export default [
         ]
       },
       {
+        key:'layout',
+        label:'布局',
+        children:[
+          {
+            key:'grid',
+            label:'Grid 栅格',
+            path:"/docs/grid"
+          },
+          {
+            key:'layout',
+            label:'Layout 布局',
+            path:"/docs/layout"
+          }
+        ]
+      },
+      {
         key:'form',
         label:'表单',
         children:[
