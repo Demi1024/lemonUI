@@ -6,6 +6,7 @@ import DeButton from '../components/Docs/DeButton.vue'
 import DeInput from '../components/Docs/DeInput.vue'
 import DeSelect from '../components/Docs/DeSelect.vue'
 import DeSwitch from '../components/Docs/DeSwitch.vue'
+import DeGrid from '../components/Docs/DeGrid.vue'
 export default [
   {
     path:'/',
@@ -41,7 +42,7 @@ export default [
       },
       {
         path:'grid',
-        component:DeSelect
+        component:DeGrid
       },
       {
         path:'layout',
