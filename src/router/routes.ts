@@ -1,12 +1,12 @@
-import Home from '../views/Home/index.vue'
-import Docs from '../views/Docs/index.vue'
-import GetStart from '../components/Docs/GetStart.vue'
-import DeIcon from '../components/Docs/DeIcon.vue'
-import DeButton from '../components/Docs/DeButton.vue'
-import DeInput from '../components/Docs/DeInput.vue'
-import DeSelect from '../components/Docs/DeSelect.vue'
-import DeSwitch from '../components/Docs/DeSwitch.vue'
-import DeGrid from '../components/Docs/DeGrid.vue'
+import Home from '../views/home/index.vue'
+import Docs from '../views/doc/index.vue'
+import GetStart from '../components/doc/get-start.vue'
+import DeIcon from '../components/doc/icon.vue'
+import DeButton from '../components/doc/button.vue'
+import DeInput from '../components/doc/input.vue'
+import DeSelect from '../components/doc/select.vue'
+import DeSwitch from '../components/doc/switch.vue'
+import DeGrid from '../components/doc/grid.vue'
 export default [
   {
     path:'/',

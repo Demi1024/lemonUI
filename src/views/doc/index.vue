@@ -15,9 +15,9 @@
   </div>
 </template>
 <script>
-import TopNav from '/src/components/TopNav/index.vue'
-import Footer from '/src/components/Footer/index.vue'
-import DocAside from '/src/components/Docs/DocAside.vue'
+import TopNav from '/src/components/top-nav/index.vue'
+import Footer from '/src/components/bot-footer/index.vue'
+import DocAside from '/src/components/doc/aside.vue'
 export default {
   components: {
     TopNav,

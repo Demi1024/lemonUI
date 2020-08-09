@@ -5,7 +5,7 @@
 </template>
 <script lang="ts">
 import menu from './menu'
-import MenuTree from './MenuTree.vue'
+import MenuTree from './menu-tree.vue'
 import { reactive,inject,Ref } from 'vue'
 export default {
   name:'DocsAside',

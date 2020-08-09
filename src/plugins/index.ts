@@ -5,10 +5,10 @@
  * @modify date 2020-07-20 23:11:39
  * @desc [LemonUI]
  */
-import Icon from "./components/Icon/index.vue";
-import Button from "./components/Button/index.vue";
-import Input from "./components/Input/index.vue";
-import Swicth from "./components/Switch/index.vue";
+import Icon from "./components/icon/index.vue";
+import Button from "./components/button/index.vue";
+import Input from "./components/input/index.vue";
+import Swicth from "./components/switch/index.vue";
 
 const install = function(Vue) {
   //注册组件
