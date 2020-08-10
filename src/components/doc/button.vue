@@ -16,6 +16,18 @@
         <de-button type="error">Error</de-button>
       </div>
     </div>
+    <div class="part-view">
+      <p>禁用</p>
+      <div class="example-component">
+        <de-button disabled>Default</de-button>
+      </div>
+    </div>
+    <div class="part-view">
+      <p>加载中</p>
+      <div class="example-component">
+        <de-button loading>Default</de-button>
+      </div>
+    </div>
   </article>
 </template>
 <script>
