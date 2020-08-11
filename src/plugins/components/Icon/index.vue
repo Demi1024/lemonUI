@@ -3,7 +3,7 @@
 </template>
 <script>
 import {computed} from 'vue'
-const prefixCls = 'de-icon';
+const prefixCls = 'limo-icon';
 export default {
   name:'Icon',
   props:{
@@ -40,7 +40,7 @@ export default {
   url('//at.alicdn.com/t/font_1961129_vu9kkpqvu3l.ttf') format('truetype'),
   url('//at.alicdn.com/t/font_1961129_vu9kkpqvu3l.svg#iconfont') format('svg');
 }
-.de-icon{
+.limo-icon{
   display: inline-block;
   font-family: iconfont;
   speak: none;

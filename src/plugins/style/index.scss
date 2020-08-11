@@ -1,6 +1,6 @@
 @import 'base.scss';
 
-.de-button, .file-cta, .file-name, .input, .pagination-ellipsis, .pagination-link, .pagination-next, .pagination-previous, .select select, .textarea {
+.limo-button {
   -moz-appearance: none;
   -webkit-appearance: none;
   align-items: center;
@@ -15,12 +15,6 @@
   padding: calc(.375em - 1px) calc(.625em - 1px);
   position: relative;
   vertical-align: top;
-}
-.input, .select select, .textarea {
-  background-color: #fff;
-  border-color: #dbdbdb;
-  border-radius: 4px;
-  color: #363636;
 }
 i{
   font-style:normal;

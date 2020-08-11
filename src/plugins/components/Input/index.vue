@@ -7,7 +7,7 @@
  */
 
 <template>
-  <div :class="['control',{small:Size == 'small'},{large:Size == 'large'}]">
+  <div :class="['limo-input-control',{small:Size == 'small'},{large:Size == 'large'}]">
     <slot></slot>
     <Icon v-show="Clearable && inputValue" 
       type="delete-round"
@@ -21,6 +21,7 @@
 import '../../style/index.scss'
 import {ref} from 'vue'
 import Icon from '../icon/index.vue'
+const prefixCls = 'limo-input'
 export default {
   name:'Input',
   components:{
@@ -50,7 +51,8 @@ export default {
 }
 </script>
 <style lang="scss">
-.control{
+.limo-input{
+  &-control{
     box-sizing: border-box;
     clear: both;
     font-size: 1rem;
@@ -61,9 +63,16 @@ export default {
       max-width: 100%;
       width: 100%;
       padding-right:2em;
+      background-color: #fff;
+      border-color: #dbdbdb;
+      border-radius: 4px;
+      color: #363636;
   }
   .input:active, .input:focus{
     outline: none;
+  }
+  .input::-ms-clear, input::-ms-reveal {
+    display: none;
   }
   .input:focus{
     border-color: #3273dc;
@@ -89,6 +98,8 @@ export default {
     right: 0.5em;
     z-index: 3;
   }
+ }
 }
+
 
 </style>

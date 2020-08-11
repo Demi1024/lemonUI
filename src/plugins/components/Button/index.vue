@@ -7,7 +7,7 @@
 <script>
 import '../../style/index.scss'
 import {computed} from 'vue'
-const prefixCls = 'de-button'
+const prefixCls = 'limo-button'
 export default{
   // inheritAttrs:false,属性值为false最外层元素不继承事件
   name:'Button',
@@ -38,7 +38,7 @@ export default{
 }
 </script>
 <style lang="scss">
-.de-button{
+.limo-button{
   transition: background .2s linear,color .2s linear;
   &-default{
     color:#515a6e;

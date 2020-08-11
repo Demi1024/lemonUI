@@ -8,7 +8,7 @@
 </template>
 
 <script lang="ts">
-const prefixCls = 'de-switch'
+const prefixCls = 'limo-switch'
 import { ref, computed, watch } from 'vue'
   export default {
     name: 'Swicth',
@@ -52,7 +52,7 @@ import { ref, computed, watch } from 'vue'
 <style lang="scss">
   $height:22px;
   $height2:$height - 4px;
-  .de-switch{
+  .limo-switch{
     position: relative;
     width:$height*2;
     height: $height;
