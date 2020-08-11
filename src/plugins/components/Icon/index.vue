@@ -30,7 +30,7 @@ export default {
   }
 }
 </script>
-<style lang="scss" scoped>
+<style lang="scss">
 @font-face {
   font-family: 'iconfont';  /* project id 1961129 */
   src: url('//at.alicdn.com/t/font_1961129_vu9kkpqvu3l.eot');

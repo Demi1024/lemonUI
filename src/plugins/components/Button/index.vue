@@ -37,7 +37,7 @@ export default{
   }
 }
 </script>
-<style lang="scss" scoped>
+<style lang="scss">
 .de-button{
   transition: background .2s linear,color .2s linear;
   &-default{

@@ -20,7 +20,7 @@
 <script>
 import '../../style/index.scss'
 import {ref} from 'vue'
-import Icon from '../Icon/index.vue'
+import Icon from '../icon/index.vue'
 export default {
   name:'Input',
   components:{
@@ -49,7 +49,7 @@ export default {
   }
 }
 </script>
-<style lang="scss" scoped>
+<style lang="scss">
 .control{
     box-sizing: border-box;
     clear: both;

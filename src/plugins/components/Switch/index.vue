@@ -49,7 +49,7 @@ import { ref, computed, watch } from 'vue'
   }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
   $height:22px;
   $height2:$height - 4px;
   .de-switch{
