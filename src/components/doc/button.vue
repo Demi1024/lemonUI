@@ -20,6 +20,7 @@
       <p>禁用</p>
       <div class="example-component">
         <de-button disabled>Default</de-button>
+        <de-button theme="primary" disabled>Default</de-button>
       </div>
     </div>
     <div class="part-view">

@@ -1,5 +1,8 @@
 <template>
-  <button :class="classes" type='button'>
+  <button :class="classes" 
+    type='button'
+    :disabled="disabled"
+  >
     <slot></slot>
   </button>
   <!-- 默认把事件传给最外层的元素 -->
@@ -40,6 +43,14 @@ export default{
 <style lang="scss">
 .limo-button{
   transition: background .2s linear,color .2s linear;
+  &[disabled]{
+    cursor: not-allowed;
+    color:#cccccc;
+    &:hover{
+      color:#cccccc;
+      border-color: #f4f5f6;
+    }
+  }
   &-default{
     color:#515a6e;
     background: #ffffff;
