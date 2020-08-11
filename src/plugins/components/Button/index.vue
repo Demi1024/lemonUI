@@ -2,15 +2,17 @@
   <button :class="classes" type='button'>
     <slot></slot>
   </button>
+  <!-- 默认把事件传给最外层的元素 -->
 </template>
 <script>
 import '../../style/index.scss'
 import {computed} from 'vue'
 const prefixCls = 'de-button'
 export default{
+  // inheritAttrs:false,属性值为false最外层元素不继承事件
   name:'Button',
   props:{
-    type:{
+    theme:{
       type:String,
       default:'default'
     },
@@ -24,14 +26,14 @@ export default{
     }
   },
   setup(props){
-    const type = computed(()=>props.type)
+    const theme = computed(()=>props.theme)
     const classes = computed(()=>{
                 return [
                     `${prefixCls}`,
-                    `${prefixCls}-${props.type}`
+                    `${prefixCls}-${props.theme}`
                 ]
             })
-    return {classes,type}
+    return {classes,theme}
   }
 }
 </script>

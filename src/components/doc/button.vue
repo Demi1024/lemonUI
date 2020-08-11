@@ -5,15 +5,15 @@
       <p>普通用法</p>
       <div class="example-component">
         <de-button>Default</de-button>
-        <de-button type="primary">Primary</de-button>
-        <de-button type="dashed">Dashed</de-button>
-        <de-button type="text">Text</de-button>
+        <de-button theme="primary">Primary</de-button>
+        <de-button theme="dashed">Dashed</de-button>
+        <de-button theme="text">Text</de-button>
         <br>
         <br>
-        <de-button type="info">Info</de-button>
-        <de-button type="success">Success</de-button>
-        <de-button type="warning">Warning</de-button>
-        <de-button type="error">Error</de-button>
+        <de-button theme="info">Info</de-button>
+        <de-button theme="success">Success</de-button>
+        <de-button theme="warning">Warning</de-button>
+        <de-button theme="error">Error</de-button>
       </div>
     </div>
     <div class="part-view">
