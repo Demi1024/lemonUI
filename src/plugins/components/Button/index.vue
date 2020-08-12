@@ -1,5 +1,6 @@
 <template>
-  <button :class="classes" 
+  <button class="limo-button"
+    :class="classes" 
     type='button'
     :disabled="disabled"
   >
@@ -26,22 +27,40 @@ export default{
     loading:{
       type:Boolean,
       default:false
+    },
+    size: {
+      type: String,
+      default: "normal"
     }
   },
   setup(props){
-    const theme = computed(()=>props.theme)
+    const {theme,size} = props
     const classes = computed(()=>{
-                return [
-                    `${prefixCls}`,
-                    `${prefixCls}-${props.theme}`
-                ]
+                return {
+                    [`${prefixCls}-${theme}`]:theme,
+                    [`limo-size-${size}`]: size,
+                }
             })
-    return {classes,theme}
+    return {classes}
   }
 }
 </script>
 <style lang="scss">
 .limo-button{
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  align-items: center;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  box-shadow: none;
+  display: inline-flex;
+  font-size: 1rem;
+  height: 2.25em;
+  justify-content: flex-start;
+  line-height: 1.5;
+  padding: calc(.375em - 1px) calc(.625em - 1px);
+  position: relative;
+  vertical-align: top;
   transition: background .2s linear,color .2s linear;
   &[disabled]{
     cursor: not-allowed;
@@ -154,6 +173,15 @@ export default{
       outline: none;
       border-color: #f8451b;
     }
+  }
+  &.limo-size-large {
+    font-size: 1.5em;
+  }
+  &.limo-size-normal {
+    font-size: 1em;
+  }
+  &.limo-size-small {
+    font-size: 0.8em;
   }
 }
 </style>

@@ -17,6 +17,14 @@
       </div>
     </div>
     <div class="part-view">
+      <p>不同的size</p>
+      <div class="example-component">
+        <de-button size="small">small</de-button>
+        <de-button>Default</de-button>
+        <de-button size="large">Default</de-button>
+      </div>
+    </div>
+    <div class="part-view">
       <p>禁用</p>
       <div class="example-component">
         <de-button disabled>Default</de-button>
