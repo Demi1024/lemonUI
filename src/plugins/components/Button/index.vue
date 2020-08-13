@@ -4,6 +4,7 @@
     type='button'
     :disabled="disabled"
   >
+    <span v-if="loading" class="limo-loadingIndicator"></span>
     <slot></slot>
   </button>
   <!-- 默认把事件传给最外层的元素 -->
@@ -183,5 +184,20 @@ export default{
   &.limo-size-small {
     font-size: 0.8em;
   }
+  & .limo-loadingIndicator{
+    width: 14px;
+    height: 14px;
+    display: inline-block;
+    margin-right: 4px;
+    border-radius: 8px; 
+    border-color: #cccccc #cccccc #cccccc transparent;
+    border-style: solid;
+    border-width: 2px;
+    animation: limo-spin 1s infinite linear;
+  }
+}
+@keyframes limo-spin {
+  0%{transform: rotate(0deg)} 
+  100%{transform: rotate(360deg)} 
 }
 </style>

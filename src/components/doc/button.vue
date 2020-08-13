@@ -35,6 +35,7 @@
       <p>加载中</p>
       <div class="example-component">
         <de-button loading>Default</de-button>
+        <de-button theme="primary" loading>Primary</de-button>
       </div>
     </div>
   </article>
