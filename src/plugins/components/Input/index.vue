@@ -9,7 +9,7 @@
 <template>
   <div :class="['limo-input-control',{small:Size == 'small'},{large:Size == 'large'}]">
     <slot></slot>
-    <Icon v-show="Clearable && inputValue" 
+    <Icon v-if="Clearable && inputValue" 
       type="delete-round"
       v-on:click="clearValue" class="input-icon"></Icon>
     <input v-model="inputValue" :class="['input',{small:Size == 'small'},{large:Size == 'large'}]"
@@ -62,7 +62,7 @@ export default {
       box-shadow: inset 0 1px 2px rgba(17, 17, 17, 0.1);
       max-width: 100%;
       width: 100%;
-      padding-right:2em;
+      padding:.2em 2em .2em .5em;
       background-color: #fff;
       border-color: #dbdbdb;
       border-radius: 4px;
