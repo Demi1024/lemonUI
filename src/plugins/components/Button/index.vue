@@ -7,7 +7,6 @@
     <span v-if="loading" class="limo-loadingIndicator"></span>
     <slot></slot>
   </button>
-  <!-- 默认把事件传给最外层的元素 -->
 </template>
 <script>
 import '../../style/index.scss'

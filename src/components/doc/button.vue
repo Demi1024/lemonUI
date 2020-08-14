@@ -36,14 +36,28 @@
       <div class="example-component">
         <de-button loading>Default</de-button>
         <de-button theme="primary" loading>Primary</de-button>
+        <de-button :loading="loading" @click="clickToLoading">Default</de-button>
+        <de-button theme="primary" :loading="loading2" @click="clickToLoading2">Primary</de-button>
       </div>
     </div>
   </article>
 </template>
 <script>
 import '../../styles/components/docs.scss'
+import { ref } from 'vue'
 export default {
-  name:'DeButton'
+  name:'DeButton',
+  setup(){
+    const loading = ref(false)
+    const loading2 = ref(false)
+    let clickToLoading = ()=>{
+      loading.value = true
+    }
+    let clickToLoading2 = ()=>{
+      loading2.value = true
+    }
+    return{loading,loading2,clickToLoading,clickToLoading2}
+  }
 }
 </script>
 <style lang="scss" scoped>
