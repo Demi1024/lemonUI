@@ -5,7 +5,7 @@ interface Highlightjs {
     [x:string]:any
  }
 
-//let Highlight:Highlightjs = {};
+// let Highlight:Highlightjs = {};
 let Highlight:any = {};
 
 Highlight.install = function (Vue:any,options:any) {
