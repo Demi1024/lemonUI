@@ -10,6 +10,7 @@ import Button from "./components/button/index.vue";
 import Col from "./components/col/index.vue";
 import Input from "./components/input/index.vue";
 import Icon from "./components/icon/index.vue";
+import Row from "./components/row/index.vue";
 import Swicth from "./components/switch/index.vue";
 
 
@@ -19,6 +20,7 @@ const install = function(Vue) {
   Vue.component("de-col", Col);
   Vue.component("de-input", Input);
   Vue.component("de-icon", Icon);
+  Vue.component("de-row", Row);
   Vue.component("de-switch", Swicth);
   
 };
