@@ -1,7 +1,7 @@
 <template>
   <article class="page">
     <h2>Button 按钮</h2>
-    <div class="part-view">
+    <de-col span="12">
       <p>普通用法</p>
       <div class="example-component">
         <de-button>Default</de-button>
@@ -15,15 +15,18 @@
         <de-button theme="warning">Warning</de-button>
         <de-button theme="error">Error</de-button>
       </div>
-    </div>
-    <div class="part-view">
+    </de-col>
+    <de-col span="12">
+      
+    </de-col>
+    <de-col span="12">
       <p>不同的size</p>
       <div class="example-component">
         <de-button size="small">small</de-button>
         <de-button>Default</de-button>
         <de-button size="large">Default</de-button>
       </div>
-    </div>
+    </de-col>
     <div class="part-view">
       <p>禁用</p>
       <div class="example-component">

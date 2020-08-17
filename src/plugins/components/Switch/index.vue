@@ -29,8 +29,8 @@ import { ref, computed, watch } from 'vue'
     setup(props,context){
       // 计算属性会挂载ref的属性和effect
       const currentValue = computed(()=> props.value)
-      const trueValue = props.trueValue
-      const falseValue = props.falseValue
+      const trueValue:boolean = props.trueValue
+      const falseValue:boolean = props.falseValue
       const classes = computed(()=>{
                 return [
                     `${prefixCls}`,
