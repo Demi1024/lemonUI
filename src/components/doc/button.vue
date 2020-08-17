@@ -18,12 +18,9 @@
         </div>
         <div>
           <p>代码示例</p>
-          <pre>
-            <code class="html">
-              <de-button theme="info">Info</de-button>
-              <de-button theme="success">Success</de-button>
-              <de-button theme="warning">Warning</de-button>
-              <de-button theme="error">Error</de-button>
+          <pre v-highlight>
+            <code class="language-html">
+              let a = 0;let b = 1
             </code>
           </pre>
         </div>
@@ -69,7 +66,8 @@ export default {
     let clickToLoading2 = ()=>{
       loading2.value = true
     }
-    return{loading,loading2,clickToLoading,clickToLoading2}
+    const code1 = "<de-button>Default</de-button>"
+    return{loading,loading2,clickToLoading,clickToLoading2,code1}
   }
 }
 </script>

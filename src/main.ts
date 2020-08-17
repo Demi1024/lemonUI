@@ -6,6 +6,7 @@ import App from './App.vue'
 import Highlight from './libs/types/highlight'
 import LemonUI from './plugins/index'
 
+console.log(Highlight)
 const app = createApp(App)
 app.use(router)
 app.use(Highlight)
