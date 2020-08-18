@@ -19,8 +19,8 @@
         <div>
           <p>代码示例</p>
           <pre v-highlight>
-            <code class="javascript">
-              let a = 0;let b = 1
+            <code class="language-html">
+              {{code1}}
             </code>
           </pre>
         </div>
@@ -66,7 +66,18 @@ export default {
     let clickToLoading2 = ()=>{
       loading2.value = true
     }
-    const code1 = "<de-button>Default</de-button>"
+    const code1 = `<div class="example-component">
+                  <de-button>Default</de-button>
+                  <de-button theme="primary">Primary</de-button>
+                  <de-button theme="dashed">Dashed</de-button>
+                  <de-button theme="text">Text</de-button>
+                  <br>
+                  <br>
+                  <de-button theme="info">Info</de-button>
+                  <de-button theme="success">Success</de-button>
+                  <de-button theme="warning">Warning</de-button>
+                  <de-button theme="error">Error</de-button>
+                </div>`
     return{loading,loading2,clickToLoading,clickToLoading2,code1}
   }
 }

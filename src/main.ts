@@ -1,6 +1,6 @@
 import './plugins/style/index.scss'
 import './styles/common/index.scss'
-import 'highlight.js/styles/monokai.css'
+import 'highlight.js/styles/monokai-sublime.css'
 import { createApp } from 'vue'
 import router from './router'
 import App from './App.vue'
@@ -20,6 +20,7 @@ app.directive('highlight', {
     let blocks = el.querySelectorAll('pre code');
     for(let i = 0 ;i < blocks.length ; i++){
       let item = blocks[i]
+      console.log(item)
       hljs.highlightBlock(item)
     }
   },
