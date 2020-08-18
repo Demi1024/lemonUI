@@ -19,7 +19,7 @@
         <div>
           <p>代码示例</p>
           <pre v-highlight>
-            <code class="language-html">
+            <code class="javascript">
               let a = 0;let b = 1
             </code>
           </pre>
