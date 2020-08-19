@@ -2,7 +2,7 @@
   <article class="page">
     <h2>Button 按钮</h2>
     <de-row>
-      <de-col span="12">
+      <de-col span="12" style="padding:20px;">
         <p>普通用法</p>
         <div class="example-component">
           <de-button>Default</de-button>
@@ -25,22 +25,30 @@
           </pre>
         </div>
       </de-col>
-      <de-col span="12">
+      <de-col span="12" style="padding:20px;">
         <p>不同的size</p>
         <div class="example-component">
           <de-button size="small">small</de-button>
           <de-button>Default</de-button>
           <de-button size="large">Default</de-button>
         </div>
+        <div>
+          <p>代码示例</p>
+          <pre v-highlight>
+            <code class="language-html">
+              {{code2}}
+            </code>
+          </pre>
+        </div>
       </de-col>
-      <de-col span="12">
+      <de-col span="12" style="padding:20px;">
         <p>禁用</p>
         <div class="example-component">
           <de-button disabled>Default</de-button>
           <de-button theme="primary" disabled>Default</de-button>
         </div>
       </de-col>
-      <de-col span="12">
+      <de-col span="12" style="padding:20px;">
         <p>加载中</p>
         <div class="example-component">
           <de-button loading>Default</de-button>
@@ -78,7 +86,12 @@ export default {
                   <de-button theme="warning">Warning</de-button>
                   <de-button theme="error">Error</de-button>
                 </div>`
-    return{loading,loading2,clickToLoading,clickToLoading2,code1}
+    const code2 = `<div class="example-component">
+            <de-button size="small">small</de-button>
+            <de-button>Default</de-button>
+            <de-button size="large">Default</de-button>
+          </div>`
+    return{loading,loading2,clickToLoading,clickToLoading2,code1,code2}
   }
 }
 </script>
