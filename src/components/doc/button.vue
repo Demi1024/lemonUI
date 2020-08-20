@@ -47,6 +47,14 @@
           <de-button disabled>Default</de-button>
           <de-button theme="primary" disabled>Default</de-button>
         </div>
+        <div>
+          <p>代码示例</p>
+          <pre v-highlight>
+            <code class="language-html">
+              {{code3}}
+            </code>
+          </pre>
+        </div>
       </de-col>
       <de-col span="12" style="padding:20px;">
         <p>加载中</p>
@@ -91,7 +99,11 @@ export default {
             <de-button>Default</de-button>
             <de-button size="large">Default</de-button>
           </div>`
-    return{loading,loading2,clickToLoading,clickToLoading2,code1,code2}
+    const code3 = `<div class="example-component">
+          <de-button disabled>Default</de-button>
+          <de-button theme="primary" disabled>Default</de-button>
+        </div>`
+    return{loading,loading2,clickToLoading,clickToLoading2,code1,code2,code3}
   }
 }
 </script>
