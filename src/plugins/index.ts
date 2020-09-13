@@ -6,15 +6,15 @@
  * @desc [LemonUI]
  */
 
-import Button from "./components/button/index.vue";
-import Col from "./components/col/index.vue";
-import Input from "./components/input/index.vue";
-import Icon from "./components/icon/index.vue";
-import Row from "./components/row/index.vue";
-import Swicth from "./components/switch/index.vue";
+import Button from "/src/plugins/components/button/index.vue";
+import Col from "/src/plugins/components/col/index.vue";
+import Input from "/src/plugins/components/input/index.vue";
+import Icon from "/src/plugins/components/icon/index.vue";
+import Row from "/src/plugins/components/row/index.vue";
+import Swicth from "/src/plugins/components/switch/index.vue";
 
 
-const install = function(Vue) {
+const install = function(Vue:any) {
   //注册组件
   Vue.component("de-button", Button);
   Vue.component("de-col", Col);
