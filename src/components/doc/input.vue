@@ -25,7 +25,7 @@
   </article>
 </template>
 <script>
-import '../../styles/components/docs.scss'
+import '/src/styles/components/docs.scss'
 export default {
   name:'DeInput'
 }

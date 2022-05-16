@@ -2,13 +2,13 @@
   <div class="document">
     <top-nav></top-nav>
     <main>
-      <DocAside></DocAside>
+      <doc-side></doc-side>
       <div class="content">
         <div class="pagebox">
           <div class="pages">
             <router-view></router-view>
           </div>
-          <Footer></Footer>
+          <footer></footer>
         </div>
       </div>
     </main>
@@ -20,9 +20,9 @@ import Footer from '/src/components/bot-footer/index.vue'
 import DocAside from '/src/components/doc/aside.vue'
 export default {
   components: {
-    TopNav,
-    DocAside,
-    Footer
+    'top-nav':TopNav,
+    'doc-side':DocAside,
+    'footer':Footer
   }
 }
 </script>

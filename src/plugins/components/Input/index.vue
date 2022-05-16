@@ -9,46 +9,45 @@
 <template>
   <div :class="['limo-input-control',{small:Size == 'small'},{large:Size == 'large'}]">
     <slot></slot>
-    <Icon v-if="Clearable && inputValue" 
+    <icon v-if="Clearable && inputValue" 
       type="delete-round"
-      v-on:click="clearValue" class="input-icon"></Icon>
+      v-on:click="clearValue" class="input-icon"></icon>
     <input v-model="inputValue" :class="['input',{small:Size == 'small'},{large:Size == 'large'}]"
       :placeholder=Placeholder
     />
   </div>
 </template>
-<script>
-import '../../style/index.scss'
-import {ref} from 'vue'
-import Icon from '../icon/index.vue'
-const prefixCls = 'limo-input'
-export default {
-  name:'Input',
-  components:{
-    Icon
-  },
-  props:{
-    size: {
-      type: String,
-      default: 'normal'
+<script lang="ts">
+  import {ref} from 'vue';
+  import Icon from '../Icon/index.vue';
+  const prefixCls = 'limo-input'
+  export default {
+    name:'Input',
+    components:{
+      icon:Icon
     },
-    placeholder: String,
-    clearable:{
-      type:Boolean,
-      default:false
+    props:{
+      size: {
+        type: String,
+        default: 'normal'
+      },
+      placeholder: String,
+      clearable:{
+        type:Boolean,
+        default:false
+      }
+    },
+    setup(props:any){
+      const Size = ref(props.size)
+      const Placeholder = ref(props.placeholder)
+      const Clearable = ref(props.clearable)
+      const inputValue = ref('')
+      const clearValue=()=>{
+        inputValue.value = ''
+      }
+      return{inputValue,Size,Placeholder,Clearable,clearValue}
     }
-  },
-  setup(props){
-    const Size = ref(props.size)
-    const Placeholder = ref(props.placeholder)
-    const Clearable = ref(props.clearable)
-    const inputValue = ref('')
-    const clearValue=()=>{
-      inputValue.value = ''
-    }
-    return{inputValue,Size,Placeholder,Clearable,clearValue}
   }
-}
 </script>
 <style lang="scss">
 .limo-input{

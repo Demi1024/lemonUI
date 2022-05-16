@@ -14,7 +14,7 @@ export default {
       default:24
     }
   },
-  setup(props){
+  setup(props:any){
     const {span} = props
     const classes = computed(()=>{
                 return [

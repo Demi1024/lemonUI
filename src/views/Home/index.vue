@@ -20,7 +20,7 @@
     <Footer></Footer>
   </div>
 </template>
-<script>
+<script lang="ts">
 import TopNav from '/src/components/top-nav/index.vue'
 import Footer from '/src/components/bot-footer/index.vue'
 import {onMounted} from 'vue'

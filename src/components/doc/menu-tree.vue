@@ -1,12 +1,13 @@
 <template>
   <ul class="menu-list">
     <li class="menu-item" v-for="item in Menu" :key=item.key>
-      <p :class="[
+      <p 
+      :class="[
       {'menu-checked':item.key === chooseItems[0]},
-      {'menu-avilable':item.path}
+      {'menu-available':item.path}
       ]"
         v-on:click="changeDocs(item.key,item.path)">{{item.label}}</p>
-      <menu-tree v-if="item.children" :Menu="item.children" :selectdKey.sync="chooseItems"></menu-tree>
+      <menu-tree v-if="item.children" :Menu="item.children" v-model:selectdKey.sync="chooseItems"></menu-tree>
     </li>
   </ul>
   
@@ -27,7 +28,7 @@ export default {
     const router = useRouter()
     // 当前选中选项
     const chooseItems = computed(() => props.selectdKey)
-    const changeDocs = (key,path)=>{
+    const changeDocs = (key:[],path:string)=>{
       if(!path){
         return
       }
@@ -36,6 +37,7 @@ export default {
       }
       // 更新路由
       router.push(path)
+      console.log(chooseItems)
       chooseItems.value.push(key)
       chooseItems.value.shift()
     }
@@ -54,7 +56,7 @@ export default {
     padding:10px 0;
     color: #6b6969;
   }
-  .menu-avilable{
+  .menu-available{
     cursor: pointer;
     color: #111111;
     transition: all 250ms linear;

@@ -3,7 +3,7 @@
     <slot></slot>
   </div>
 </template>
-<script>
+<script lang="ts">
 const prefixCls = 'limo-row'
 export default {
   name:'Row'

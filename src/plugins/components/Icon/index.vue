@@ -43,7 +43,6 @@ export default {
 .limo-icon{
   display: inline-block;
   font-family: iconfont;
-  speak: none;
   font-style: normal;
   font-weight: 400;
   font-variant: normal;
