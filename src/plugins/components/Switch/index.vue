@@ -57,7 +57,7 @@ import { ref, computed, watch } from 'vue'
     width:$height*2;
     height: $height;
     background: #cccccc;
-    border-radius: $height/2;
+    border-radius: calc($height/2);
     border:none;
     transition: all 250ms linear;
     &::after{
@@ -68,7 +68,7 @@ import { ref, computed, watch } from 'vue'
       display: inline-block;
       width: $height2;
       height:$height2;
-      border-radius: $height2/2;
+      border-radius: calc($height2/2);
       background:#ffffff;
       transition: all 250ms linear;
     }

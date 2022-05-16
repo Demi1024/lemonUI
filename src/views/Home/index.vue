@@ -77,7 +77,7 @@ export default {
         $h:30px;
         height:$h;
         line-height: $h;
-        border-radius: $h/2;
+        border-radius: calc($h/2);
         padding:0 10px;
         &:active{
           color:#36D1DC;
