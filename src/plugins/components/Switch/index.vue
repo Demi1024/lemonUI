@@ -9,7 +9,7 @@
 
 <script lang="ts">
 const prefixCls = 'limo-switch'
-import { ref, computed, watch } from 'vue'
+import { computed,SetupContext } from 'vue'
   export default {
     name: 'Swicth',
     props:{
@@ -26,11 +26,11 @@ import { ref, computed, watch } from 'vue'
         default:false
       }
     },
-    setup(props,context){
+    setup(props:any,context:SetupContext<Record<string, any>>){
       // 计算属性会挂载ref的属性和effect
       const currentValue = computed(()=> props.value)
-      const trueValue:boolean = props.trueValue
-      const falseValue:boolean = props.falseValue
+      const trueValue = props.trueValue
+      const falseValue = props.falseValue
       const classes = computed(()=>{
                 return [
                     `${prefixCls}`,
@@ -60,6 +60,7 @@ import { ref, computed, watch } from 'vue'
     border-radius: calc($height/2);
     border:none;
     transition: all 250ms linear;
+    cursor: pointer;
     &::after{
       content: '';
       position: absolute;

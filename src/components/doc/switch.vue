@@ -3,7 +3,7 @@
     <h2>Swicth 开关</h2>
     <div>
       <p>默认使用</p>
-      <de-switch v-model:value="testDefault"></de-switch>
+      <de-switch  v-model:value="testDefault"></de-switch>
     </div>
     <div>
       <p>自定义值</p>
