@@ -9,8 +9,8 @@ const BASE_URL = '/lemon/'
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [vue()],
-  base:BASE_URL,
+  base:'/lemon/',
   server: {
-    open: true // 配置自动启动浏览器
+    port:5173
   }
 })
