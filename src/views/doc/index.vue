@@ -8,7 +8,7 @@
           <div class="pages">
             <router-view></router-view>
           </div>
-          <footer></footer>
+          <bottom-footer></bottom-footer>
         </div>
       </div>
     </main>
@@ -22,7 +22,7 @@ export default {
   components: {
     'top-nav':TopNav,
     'doc-side':DocAside,
-    'footer':Footer
+    'bottom-footer':Footer
   }
 }
 </script>

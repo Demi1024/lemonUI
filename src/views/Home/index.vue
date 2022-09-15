@@ -17,18 +17,18 @@
         </article>
       </section>
     </main>
-    <Footer></Footer>
+    <bottom-footer></bottom-footer>
   </div>
 </template>
 <script lang="ts">
 import TopNav from '/src/components/top-nav/index.vue'
-import Footer from '/src/components/bot-footer/index.vue'
+import BottomFooter from '/src/components/bot-footer/index.vue'
 import {onMounted} from 'vue'
 export default {
   name:'home',
   components: {
     TopNav,
-    Footer
+    BottomFooter
   },
   setup(){
     // 生命周期
