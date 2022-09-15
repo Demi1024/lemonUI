@@ -16,7 +16,6 @@ export default {
   name:'TopNav',
   setup(){
     const asideVisible = inject<Ref<boolean>>('asideVisible')
-    console.log('topnav的可见性：'+asideVisible.value)
     const toogleVisible = ()=>{
       asideVisible.value = !asideVisible.value
     }

@@ -20,7 +20,6 @@ app.directive('highlight', {
     let blocks = el.querySelectorAll('pre code');
     for(let i = 0 ;i < blocks.length ; i++){
       let item = blocks[i]
-      console.log(item)
       hljs.highlightBlock(item)
     }
   },

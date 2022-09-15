@@ -15,7 +15,6 @@
 <script lang="ts">
 import {useRouter} from 'vue-router'
 import { onMounted,computed,watch,reactive,inject,Ref } from 'vue'
-// import { ref, computed, Ref, watch, createComponent } from '@vue/composition-api'
 export default {
   name:'MenuTree',
   props:{
@@ -27,7 +26,10 @@ export default {
     const pageWidth = document.documentElement.clientWidth
     const router = useRouter()
     // 当前选中选项
-    const chooseItems = computed(() => props.selectdKey)
+    let chooseItems = computed({
+      get:() => props.selectdKey,
+      set:(val)=>val
+    })
     const changeDocs = (key:[],path:string)=>{
       if(!path){
         return
@@ -37,13 +39,8 @@ export default {
       }
       // 更新路由
       router.push(path)
-      console.log(chooseItems)
-      chooseItems.value.push(key)
-      chooseItems.value.shift()
+      chooseItems.value = key
     }
-    // 生命周期
-    onMounted(()=>{
-    })
     return { router,changeDocs,chooseItems};
   }
 }
