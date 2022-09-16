@@ -1,6 +1,6 @@
 <template>
   <nav>
-    <span class="toggle"  @click="toogleVisible">LOGO</span>
+    <span class="toggle"  @click="toggleVisible">LOGO</span>
     <div class="logo">
       <router-link to="/">柠檬UI</router-link>
     </div>
@@ -16,10 +16,12 @@ export default {
   name:'TopNav',
   setup(){
     const asideVisible = inject<Ref<boolean>>('asideVisible')
-    const toogleVisible = ()=>{
-      asideVisible.value = !asideVisible.value
+
+    const toggleVisible = ()=>{
+      if(!asideVisible) return;
+      asideVisible.value = !asideVisible?.value
     }
-    return {toogleVisible}
+    return {toggleVisible}
   }
 }
 </script>
