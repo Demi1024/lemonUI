@@ -21,7 +21,7 @@ export default {
     Menu: Array,
     selectdKey:Array,
   },
-  setup(props, { emit }) {
+  setup(props:any) {
     const asideVisible = inject<Ref<boolean>>('asideVisible')
     const pageWidth = document.documentElement.clientWidth
     const router = useRouter()
