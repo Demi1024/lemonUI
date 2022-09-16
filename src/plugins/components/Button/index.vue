@@ -8,7 +8,7 @@
     <slot></slot>
   </button>
 </template>
-<script>
+<script lang="ts">
 import '../../style/index.scss'
 import {computed} from 'vue'
 const prefixCls = 'limo-button'
@@ -33,7 +33,7 @@ export default{
       default: "normal"
     }
   },
-  setup(props){
+  setup(props:any){
     const {theme,size} = props
     const classes = computed(()=>{
                 return {
@@ -47,8 +47,6 @@ export default{
 </script>
 <style lang="scss">
 .limo-button{
-  -moz-appearance: none;
-  -webkit-appearance: none;
   align-items: center;
   border: 1px solid transparent;
   border-radius: 4px;

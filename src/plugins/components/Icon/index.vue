@@ -1,7 +1,7 @@
 <template>
   <i :class="classes"></i>
 </template>
-<script>
+<script lang="ts">
 import {computed} from 'vue'
 const prefixCls = 'limo-icon';
 export default {
@@ -16,7 +16,7 @@ export default {
       default:''
     }
   },
-  setup(props){
+  setup(props:any){
     const classes = computed(()=>{
                 return [
                     `${prefixCls}`,

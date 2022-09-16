@@ -21,7 +21,7 @@
     </ul>
   </article>
 </template>
-<script>
+<script lang="ts">
 import '../../styles/components/docs.scss'
 export default {
   name:'DeIcon'

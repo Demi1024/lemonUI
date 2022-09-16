@@ -68,7 +68,7 @@
     </de-row>
   </article>
 </template>
-<script>
+<script lang="ts">
 import '../../styles/components/docs.scss'
 import { ref } from 'vue'
 export default {
