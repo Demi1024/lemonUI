@@ -1,6 +1,6 @@
 <template>
   <footer>
-    <p>技术支持By Demi</p>
+    <p>技术支持 By Demi</p>
     <p>联系我：demi1024w@126.com</p>
   </footer>
 </template>

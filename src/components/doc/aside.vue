@@ -1,6 +1,6 @@
 <template>
   <aside class="aside" v-if="asideVisible">
-    <menu-tree :Menu=Menu v-model:selectdKey.sync="selectdKey"></menu-tree>
+    <menu-tree :Menu=Menu v-model:selectedKey.sync="selectedKey"></menu-tree>
   </aside>
 </template>
 <script lang="ts">
@@ -15,8 +15,8 @@ export default {
   setup(){
      const asideVisible = inject<Ref<boolean>>('asideVisible')
      const Menu = reactive(menu)
-     const selectdKey = reactive(['started'])
-     return{asideVisible,Menu,selectdKey}
+     const selectedKey = reactive(['started'])
+     return{asideVisible,Menu,selectedKey}
   }
 }
 </script>

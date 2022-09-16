@@ -4,11 +4,11 @@
       <top-nav></top-nav>
       <section class="banner">
         <div class="intro">
-          <h1>柠檬UI</h1>
-          <p>基于VUE3和TypeScript的轻量级UI框架</p>
+          <h1>柠檬 UI</h1>
+          <p>基于 VUE3 和 TypeScript 的轻量级 UI 框架</p>
           <div class="links">
             <router-link to="/docs/started">查看文档</router-link>
-            |
+            | 
             <a href="https://github.com/Demi1024/lemonUI">Github</a>
           </div>
         </div>
@@ -33,7 +33,7 @@ export default {
   setup(){
     // 生命周期
     onMounted(()=>{
-      document.title="柠檬UI "
+      document.title="柠檬 UI "
     })
   }
 }

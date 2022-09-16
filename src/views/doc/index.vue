@@ -4,7 +4,7 @@
     <main>
       <doc-side></doc-side>
       <div class="content">
-        <div class="pagebox">
+        <div class="page-box">
           <div class="pages">
             <router-view></router-view>
           </div>
@@ -36,7 +36,7 @@ export default {
     display: flex;
     > .content{
       flex-grow: 1;
-      .pagebox{
+      .page-box{
         height: 100%;
         display: flex;
         flex-direction: column;

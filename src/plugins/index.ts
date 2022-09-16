@@ -11,7 +11,7 @@ import Col from "/src/plugins/components/col/index.vue";
 import Input from "/src/plugins/components/input/index.vue";
 import Icon from "/src/plugins/components/icon/index.vue";
 import Row from "/src/plugins/components/row/index.vue";
-import Swicth from "/src/plugins/components/switch/index.vue";
+import Switch from "/src/plugins/components/switch/index.vue";
 
 
 const install = function(Vue:any) {
@@ -21,7 +21,7 @@ const install = function(Vue:any) {
   Vue.component("de-input", Input);
   Vue.component("de-icon", Icon);
   Vue.component("de-row", Row);
-  Vue.component("de-switch", Swicth);
+  Vue.component("de-switch", Switch);
   
 };
 

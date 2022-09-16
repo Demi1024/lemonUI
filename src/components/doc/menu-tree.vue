@@ -7,7 +7,7 @@
       {'menu-available':item.path}
       ]"
         v-on:click="changeDocs(item.key,item.path)">{{item.label}}</p>
-      <menu-tree v-if="item.children" :Menu="item.children" v-model:selectdKey.sync="chooseItems"></menu-tree>
+      <menu-tree v-if="item.children" :Menu="item.children" v-model:selectedKey.sync="chooseItems"></menu-tree>
     </li>
   </ul>
   
@@ -19,7 +19,7 @@ export default {
   name:'MenuTree',
   props:{
     Menu: Array,
-    selectdKey:Array,
+    selectedKey:Array,
   },
   setup(props:any) {
     const asideVisible = inject<Ref<boolean>>('asideVisible')
@@ -27,14 +27,14 @@ export default {
     const router = useRouter()
     // 当前选中选项
     let chooseItems = computed({
-      get:() => props.selectdKey,
+      get:() => props.selectedKey,
       set:(val)=>val
     })
     const changeDocs = (key:[],path:string)=>{
       if(!path){
         return
       }
-      if(key === props.selectdKey){
+      if(key === props.selectedKey){
         return
       }
       // 更新路由

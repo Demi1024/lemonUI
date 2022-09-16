@@ -26,7 +26,7 @@
         </div>
       </de-col>
       <de-col span="12" style="padding:20px;">
-        <p>不同的size</p>
+        <p>不同的 size</p>
         <div class="example-component">
           <de-button size="small">small</de-button>
           <de-button>Default</de-button>

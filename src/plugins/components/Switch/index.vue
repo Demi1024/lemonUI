@@ -11,7 +11,7 @@
 const prefixCls = 'limo-switch'
 import { computed,SetupContext } from 'vue'
   export default {
-    name: 'Swicth',
+    name: 'Switch',
     props:{
       value:{
         type: [String, Number, Boolean],

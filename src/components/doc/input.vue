@@ -1,6 +1,6 @@
 <template>
   <article class="page">
-    <h2>Input输入框</h2>
+    <h2>Input 输入框</h2>
     <div class="part-view">
       普通用法
       <div class="example-component">
