@@ -72,7 +72,7 @@
 import '../../styles/components/docs.scss'
 import { ref } from 'vue'
 export default {
-  name:'DeButton',
+  name:'ButtonContent',
   setup(){
     const loading = ref(false)
     const loading2 = ref(false)

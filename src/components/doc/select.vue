@@ -5,6 +5,6 @@
 </template>
 <script lang="ts">
 export default {
-  name:'DeSelect'
+  name:'SelectContent'
 }
 </script>

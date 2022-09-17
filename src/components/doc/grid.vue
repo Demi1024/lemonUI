@@ -6,7 +6,7 @@
 
 <script lang="ts">
   export default {
-    name: 'DeGrid',
+    name: 'GridContent',
     data() {
       return {
         

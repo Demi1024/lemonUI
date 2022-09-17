@@ -22,7 +22,7 @@
 <script lang="ts">
 import { ref } from 'vue'
 export default {
-  name:'DeSwitch',
+  name:'SwitchContent',
   setup(){
     const testDefault = ref(false)
     const testShowLabel = ref('yes')

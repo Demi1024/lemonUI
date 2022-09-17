@@ -24,7 +24,7 @@
 <script lang="ts">
 import '../../styles/components/docs.scss'
 export default {
-  name:'DeIcon'
+  name:'IconContent'
 }
 </script>
 <style lang="scss" scoped>

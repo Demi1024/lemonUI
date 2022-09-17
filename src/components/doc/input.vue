@@ -27,6 +27,6 @@
 <script lang="ts">
 import '/src/styles/components/docs.scss'
 export default {
-  name:'DeInput'
+  name:'InputContent'
 }
 </script>
