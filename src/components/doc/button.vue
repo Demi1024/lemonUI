@@ -1,20 +1,20 @@
 <template>
   <article class="page">
     <h2>Button 按钮</h2>
-    <de-row>
-      <de-col span="12" style="padding:20px;">
+    <le-row>
+      <le-col span="12" style="padding:20px;">
         <p>普通用法</p>
         <div class="example-component">
-          <de-button>Default</de-button>
-          <de-button theme="primary">Primary</de-button>
-          <de-button theme="dashed">Dashed</de-button>
-          <de-button theme="text">Text</de-button>
+          <le-button>Default</le-button>
+          <le-button theme="primary">Primary</le-button>
+          <le-button theme="dashed">Dashed</le-button>
+          <le-button theme="text">Text</le-button>
           <br>
           <br>
-          <de-button theme="info">Info</de-button>
-          <de-button theme="success">Success</de-button>
-          <de-button theme="warning">Warning</de-button>
-          <de-button theme="error">Error</de-button>
+          <le-button theme="info">Info</le-button>
+          <le-button theme="success">Success</le-button>
+          <le-button theme="warning">Warning</le-button>
+          <le-button theme="error">Error</le-button>
         </div>
         <div>
           <p>代码示例</p>
@@ -24,13 +24,13 @@
             </code>
           </pre>
         </div>
-      </de-col>
-      <de-col span="12" style="padding:20px;">
+      </le-col>
+      <le-col span="12" style="padding:20px;">
         <p>不同的 size</p>
         <div class="example-component">
-          <de-button size="small">small</de-button>
-          <de-button>Default</de-button>
-          <de-button size="large">Default</de-button>
+          <le-button size="small">small</le-button>
+          <le-button>Default</le-button>
+          <le-button size="large">Default</le-button>
         </div>
         <div>
           <p>代码示例</p>
@@ -40,12 +40,12 @@
             </code>
           </pre>
         </div>
-      </de-col>
-      <de-col span="12" style="padding:20px;">
+      </le-col>
+      <le-col span="12" style="padding:20px;">
         <p>禁用</p>
         <div class="example-component">
-          <de-button disabled>Default</de-button>
-          <de-button theme="primary" disabled>Default</de-button>
+          <le-button disabled>Default</le-button>
+          <le-button theme="primary" disabled>Default</le-button>
         </div>
         <div>
           <p>代码示例</p>
@@ -55,17 +55,17 @@
             </code>
           </pre>
         </div>
-      </de-col>
-      <de-col span="12" style="padding:20px;">
+      </le-col>
+      <le-col span="12" style="padding:20px;">
         <p>加载中</p>
         <div class="example-component">
-          <de-button loading>Default</de-button>
-          <de-button theme="primary" loading>Primary</de-button>
-          <de-button :loading="loading" @click="clickToLoading">Default</de-button>
-          <de-button theme="primary" :loading="loading2" @click="clickToLoading2">Primary</de-button>
+          <le-button loading>Default</le-button>
+          <le-button theme="primary" loading>Primary</le-button>
+          <le-button :loading="loading" @click="clickToLoading">Default</le-button>
+          <le-button theme="primary" :loading="loading2" @click="clickToLoading2">Primary</le-button>
         </div>
-      </de-col>
-    </de-row>
+      </le-col>
+    </le-row>
   </article>
 </template>
 <script lang="ts">
@@ -83,25 +83,25 @@ export default {
       loading2.value = true
     }
     const code1 = `<div class="example-component">
-                  <de-button>Default</de-button>
-                  <de-button theme="primary">Primary</de-button>
-                  <de-button theme="dashed">Dashed</de-button>
-                  <de-button theme="text">Text</de-button>
+                  <le-button>Default</le-button>
+                  <le-button theme="primary">Primary</le-button>
+                  <le-button theme="dashed">Dashed</le-button>
+                  <le-button theme="text">Text</le-button>
                   <br>
                   <br>
-                  <de-button theme="info">Info</de-button>
-                  <de-button theme="success">Success</de-button>
-                  <de-button theme="warning">Warning</de-button>
-                  <de-button theme="error">Error</de-button>
+                  <le-button theme="info">Info</le-button>
+                  <le-button theme="success">Success</le-button>
+                  <le-button theme="warning">Warning</le-button>
+                  <le-button theme="error">Error</le-button>
                 </div>`
     const code2 = `<div class="example-component">
-            <de-button size="small">small</de-button>
-            <de-button>Default</de-button>
-            <de-button size="large">Default</de-button>
+            <le-button size="small">small</le-button>
+            <le-button>Default</le-button>
+            <le-button size="large">Default</le-button>
           </div>`
     const code3 = `<div class="example-component">
-          <de-button disabled>Default</de-button>
-          <de-button theme="primary" disabled>Default</de-button>
+          <le-button disabled>Default</le-button>
+          <le-button theme="primary" disabled>Default</le-button>
         </div>`
     return{loading,loading2,clickToLoading,clickToLoading2,code1,code2,code3}
   }

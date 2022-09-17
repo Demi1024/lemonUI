@@ -3,18 +3,18 @@
     <h2>Switch 开关</h2>
     <div>
       <p>默认使用</p>
-      <de-switch  v-model:value="testDefault"></de-switch>
+      <le-switch  v-model:value="testDefault"></le-switch>
     </div>
     <div>
       <p>自定义值</p>
-      <de-switch v-model:value="testShowLabel" trueValue="yes" falseValue="no"></de-switch>{{testShowLabel}}
+      <le-switch v-model:value="testShowLabel" trueValue="yes" falseValue="no"></le-switch>{{testShowLabel}}
     </div>
     <div>
       <p>自定义文字</p>
-      <de-switch v-model:value="testShowLabel" trueValue="yes" falseValue="no">
+      <le-switch v-model:value="testShowLabel" trueValue="yes" falseValue="no">
         <template v-slot:open>开</template>c
         <template v-slot:close>关</template>
-      </de-switch>
+      </le-switch>
     </div>
     
   </article>

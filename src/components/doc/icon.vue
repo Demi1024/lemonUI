@@ -4,19 +4,19 @@
     <p>基础用法</p>
     <ul>
       <li>
-        <de-icon type="delete-round"></de-icon>
+        <le-icon type="delete-round"></le-icon>
       </li>
       <li>
-        <de-icon type="up-arrow"></de-icon>
+        <le-icon type="up-arrow"></le-icon>
       </li>
       <li>
-        <de-icon type="down-arrow"></de-icon>
+        <le-icon type="down-arrow"></le-icon>
       </li>
       <li>
-        <de-icon type="left-arrow"></de-icon>
+        <le-icon type="left-arrow"></le-icon>
       </li>
       <li>
-        <de-icon type="right-arrow"></de-icon>
+        <le-icon type="right-arrow"></le-icon>
       </li>
     </ul>
   </article>

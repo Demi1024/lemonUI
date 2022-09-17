@@ -16,12 +16,12 @@ import Switch from "/src/plugins/components/switch/index.vue";
 
 const install = function(Vue:any) {
   //注册组件
-  Vue.component("de-button", Button);
-  Vue.component("de-col", Col);
-  Vue.component("de-input", Input);
-  Vue.component("de-icon", Icon);
-  Vue.component("de-row", Row);
-  Vue.component("de-switch", Switch);
+  Vue.component("le-button", Button);
+  Vue.component("le-col", Col);
+  Vue.component("le-input", Input);
+  Vue.component("le-icon", Icon);
+  Vue.component("le-row", Row);
+  Vue.component("le-switch", Switch);
   
 };
 
