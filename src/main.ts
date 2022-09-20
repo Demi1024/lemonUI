@@ -5,7 +5,8 @@ import { createApp } from 'vue'
 import router from './router'
 import App from './App.vue'
 import hljs from 'highlight.js';
-import LemonUI from './plugins/index'
+import LemonUI from './plugins/index';
+import svgIcon from './components/svgIcon/index.vue';
 
 const app = createApp(App)
 app.use(router)
@@ -39,6 +40,8 @@ app.directive('highlight', {
     }
   }
 })
+
+app.component('svg-icon', svgIcon);
 
 app.mount('#app')
 

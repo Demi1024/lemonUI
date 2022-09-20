@@ -2,7 +2,7 @@
   <nav>
     <span class="toggle"  @click="toggleVisible">LOGO</span>
     <div class="logo">
-      <router-link to="/">柠檬 UI</router-link>
+      <router-link to="/"><svg-icon name="logo" class="logo-size"></svg-icon>柠檬 UI</router-link>
     </div>
     <ul class="menu">
       <li><router-link to="/docs/started">文档</router-link></li>
@@ -44,10 +44,13 @@ nav{
     display: none;
   }
   > .logo{
-    max-width: 6em;
     margin-right: auto;
+    padding-left:20px;
     a{
       color:#515a6e;
+    }
+    .logo-size{
+      margin-right:5px;
     }
   }
   > .menu{ 
