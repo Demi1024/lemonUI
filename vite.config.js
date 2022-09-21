@@ -6,7 +6,7 @@ import vue from '@vitejs/plugin-vue'
 import {createSvg} from './src/utils/svg';
 import path from 'path';
 
-const BASE_URL = '/lemon/'
+const BASE_URL = '/lemonUI/'
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [vue(),createSvg('./src/assets/icons/svg/')],
