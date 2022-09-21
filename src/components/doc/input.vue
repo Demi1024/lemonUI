@@ -25,8 +25,12 @@
   </article>
 </template>
 <script lang="ts">
-import '/src/styles/components/docs.scss'
+import Input from '@/plugins/components/input/index.vue';
+import '@/styles/components/docs.scss'
 export default {
-  name:'InputContent'
+  name:'InputContent',
+  components:{
+    'le-input':Input
+  }
 }
 </script>

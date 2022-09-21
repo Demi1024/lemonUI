@@ -6,23 +6,9 @@
  * @desc [LemonUI]
  */
 
-import Button from "./components/button/index.vue";
-import Col from "./components/col/index.vue";
-import Input from "./components/input/index.vue";
-import Icon from "./components/icon/index.vue";
-import Row from "./components/row/index.vue";
-import Switch from "./components/switch/index.vue";
-
-
-const install = function(Vue:any) {
-  //注册组件
-  Vue.component("le-button", Button);
-  Vue.component("le-col", Col);
-  Vue.component("le-input", Input);
-  Vue.component("le-icon", Icon);
-  Vue.component("le-row", Row);
-  Vue.component("le-switch", Switch);
-  
-};
-
-export default install;
+export { default as Switch } from "./components/switch/index.vue";
+export { default as Input } from "./components/input/index.vue";
+export { default as Button } from "./components/button/index.vue";
+export { default as Col } from "./components/col/index.vue";
+export { default as Row } from "./components/row/index.vue";
+export { default as Icon } from "./components/icon/index.vue";

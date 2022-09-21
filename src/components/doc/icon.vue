@@ -22,9 +22,13 @@
   </article>
 </template>
 <script lang="ts">
-import '../../styles/components/docs.scss'
+import Icon from '@/plugins/components/icon/index.vue';
+import '@/styles/components/docs.scss'
 export default {
-  name:'IconContent'
+  name:'IconContent',
+  components:{
+    'le-icon':Icon
+  }
 }
 </script>
 <style lang="scss" scoped>

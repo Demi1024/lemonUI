@@ -5,12 +5,10 @@ import { createApp } from 'vue'
 import router from './router'
 import App from './App.vue'
 import hljs from 'highlight.js';
-import LemonUI from './plugins/index';
 import svgIcon from './components/svgIcon/index.vue';
 
 const app = createApp(App)
 app.use(router)
-app.use(LemonUI)
 
 // 注册自定义指令高亮代码
 app.directive('highlight', {

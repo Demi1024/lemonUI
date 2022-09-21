@@ -20,9 +20,13 @@
   </article>
 </template>
 <script lang="ts">
+import Switch from '@/plugins/components/switch/index.vue';
 import { ref } from 'vue'
 export default {
   name:'SwitchContent',
+  components:{
+    'le-switch':Switch
+  },
   setup(){
     const testDefault = ref(false)
     const testShowLabel = ref('yes')

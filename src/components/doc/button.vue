@@ -69,10 +69,14 @@
   </article>
 </template>
 <script lang="ts">
-import '../../styles/components/docs.scss'
+import Button from '@/plugins/components/button/index.vue';
+import '@/styles/components/docs.scss'
 import { ref } from 'vue'
 export default {
   name:'ButtonContent',
+  components:{
+   'le-button':Button
+  },
   setup(){
     const loading = ref(false)
     const loading2 = ref(false)
