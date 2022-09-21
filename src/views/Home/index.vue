@@ -21,8 +21,8 @@
   </div>
 </template>
 <script lang="ts">
-import TopNav from '/src/components/top-nav/index.vue'
-import BottomFooter from '/src/components/bot-footer/index.vue'
+import TopNav from '@/components/topNav/index.vue'
+import BottomFooter from '@/components/pageFooter/index.vue'
 import {onMounted} from 'vue'
 export default {
   name:'home',
