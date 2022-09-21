@@ -6,12 +6,12 @@
  * @desc [LemonUI]
  */
 
-import Button from "/src/plugins/components/button/index.vue";
-import Col from "/src/plugins/components/col/index.vue";
-import Input from "/src/plugins/components/input/index.vue";
-import Icon from "/src/plugins/components/icon/index.vue";
-import Row from "/src/plugins/components/row/index.vue";
-import Switch from "/src/plugins/components/switch/index.vue";
+import Button from "./components/button/index.vue";
+import Col from "./components/col/index.vue";
+import Input from "./components/input/index.vue";
+import Icon from "./components/icon/index.vue";
+import Row from "./components/row/index.vue";
+import Switch from "./components/switch/index.vue";
 
 
 const install = function(Vue:any) {
