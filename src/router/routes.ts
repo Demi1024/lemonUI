@@ -1,4 +1,4 @@
-import Home from '@/views/home/index.vue'
+import Home from '@/views/Home/index.vue'
 import Docs from '@/views/doc/index.vue'
 import GetStart from '@/components/doc/get-start.vue'
 import DeIcon from '@/components/doc/icon.vue'
