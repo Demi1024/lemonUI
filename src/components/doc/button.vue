@@ -2,7 +2,7 @@
   <article class="page">
     <h2>Button 按钮</h2>
     <le-row>
-      <le-col span="12" style="padding:20px;">
+      <le-col :span="12" style="padding:20px;">
         <p>普通用法</p>
         <div class="example-component">
           <le-button>Default</le-button>
@@ -25,7 +25,7 @@
           </pre>
         </div>
       </le-col>
-      <le-col span="12" style="padding:20px;">
+      <le-col :span="12" style="padding:20px;">
         <p>不同的 size</p>
         <div class="example-component">
           <le-button size="small">small</le-button>
@@ -41,7 +41,7 @@
           </pre>
         </div>
       </le-col>
-      <le-col span="12" style="padding:20px;">
+      <le-col :span="12" style="padding:20px;">
         <p>禁用</p>
         <div class="example-component">
           <le-button disabled>Default</le-button>
@@ -56,7 +56,7 @@
           </pre>
         </div>
       </le-col>
-      <le-col span="12" style="padding:20px;">
+      <le-col :span="12" style="padding:20px;">
         <p>加载中</p>
         <div class="example-component">
           <le-button loading>Default</le-button>
