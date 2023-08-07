@@ -14,6 +14,9 @@ jobs:
         with:
           node-version: '20'
           cache: 'yarn'
+          
+      - name: Clean cache
+        run: yarn cache clean
 
       - name: Install node deps
         run: yarn install
