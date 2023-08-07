@@ -6,9 +6,9 @@
  * @desc [LemonUI]
  */
 
-export { default as Switch } from "./components/switch/index.vue";
-export { default as Input } from "./components/input/index.vue";
-export { default as Button } from "./components/button/index.vue";
-export { default as Col } from "./components/col/index.vue";
-export { default as Row } from "./components/row/index.vue";
-export { default as Icon } from "./components/icon/index.vue";
+export { default as Switch } from "./components/Switch/index.vue";
+export { default as Input } from "./components/Input/index.vue";
+export { default as Button } from "./components/Button/index.vue";
+export { default as Col } from "./components/Col/index.vue";
+export { default as Row } from "./components/Row/index.vue";
+export { default as Icon } from "./components/Icon/index.vue";

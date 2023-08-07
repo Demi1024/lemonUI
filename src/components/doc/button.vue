@@ -69,7 +69,7 @@
   </article>
 </template>
 <script lang="ts">
-import Button from '@/plugins/components/button/index.vue';
+import Button from '@/plugins/components/Button/index.vue';
 import '@/styles/components/docs.scss'
 import { ref } from 'vue'
 export default {

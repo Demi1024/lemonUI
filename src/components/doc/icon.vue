@@ -22,7 +22,7 @@
   </article>
 </template>
 <script lang="ts">
-import Icon from '@/plugins/components/icon/index.vue';
+import Icon from '@/plugins/components/Icon/index.vue';
 import '@/styles/components/docs.scss'
 export default {
   name:'IconContent',
