@@ -1,6 +1,9 @@
-# LemonUI 柠檬 UI
+# ![logo](src/assets/icons/svg/logo.svg) LemonUI
+
 
 这是一款基于 Vue3.0 的轻量级 UI 组件库。简单清爽的风格希望你会喜欢.
+
+[在线查看](https://demi1024.github.io/lemonUI/#/)
 
 ## 安装
 
@@ -23,15 +26,19 @@ const app = createApp(App)
 app.use(LemonUI)
 app.mount('#app')
 
-// 使用组件
-<le-icon></le-icon>
-
-<le-button></le-button>
-
-<le-switch></le-switch>
-
-<le-input></le-input>
 ```
+
+使用示例
+
+```html
+<template>
+  <le-icon></le-icon>
+  <le-button></le-button>
+  <le-switch></le-switch>
+  <le-input></le-input>
+</template>
+```
+
 
 目前计划开发的组件
 
