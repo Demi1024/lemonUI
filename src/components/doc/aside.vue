@@ -1,12 +1,12 @@
 <template>
   <aside class="aside" v-if="asideVisible">
-    <menu-tree :Menu=Menu v-model:selectedKey.sync="selectedKey"></menu-tree>
+    <menu-tree :Menu=Menu :selectedKey.sync="selectedKey" @update:selectedKey="changeSelectedKey"></menu-tree>
   </aside>
 </template>
 <script lang="ts">
 import menu from './menu'
 import MenuTree from './menu-tree.vue'
-import { reactive,inject,Ref } from 'vue'
+import { reactive,inject,Ref,ref } from 'vue'
 export default {
   name:'DocsAside',
   components:{
@@ -15,8 +15,12 @@ export default {
   setup(){
      const asideVisible = inject<Ref<boolean>>('asideVisible')
      const Menu = reactive(menu)
-     const selectedKey = reactive(['started'])
-     return{asideVisible,Menu,selectedKey}
+     const selectedKey = ref('started');
+
+     const changeSelectedKey = (key:string)=>{
+      selectedKey.value = key
+     }
+     return{asideVisible,Menu,selectedKey,changeSelectedKey}
   }
 }
 </script>
