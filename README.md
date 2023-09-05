@@ -1,5 +1,6 @@
 # ![logo](src/assets/icons/svg/logo.svg) LemonUI
 
+![github actions](https://github.com/Demi1024/lemonUI/actions/workflows/ci.yml/badge.svg?event=push)
 
 这是一款基于 Vue3.0 的轻量级 UI 组件库。简单清爽的风格希望你会喜欢.
 
