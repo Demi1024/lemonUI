@@ -1,5 +1,5 @@
 <template>
-  <button :class="classes" @click="toogle">
+  <button :class="classes" @click="toggle">
     <span :class="innerClass">
         <slot name="open" v-if="currentValue.value === trueValue"></slot>
         <slot name="close" v-if="currentValue.value === falseValue"></slot>
@@ -40,11 +40,11 @@ import { computed,SetupContext } from 'vue'
                 ]
             })
       const innerClass = computed(()=> `${prefixCls}-inner`)
-      const toogle = ()=>{
+      const toggle = ()=>{
         const checked = currentValue.value === props.trueValue ? props.falseValue : props.trueValue;
         context.emit('update:value',checked)
       }
-      return{currentValue,trueValue,falseValue,classes,innerClass,toogle}
+      return{currentValue,trueValue,falseValue,classes,innerClass,toggle}
     }
   }
 </script>
