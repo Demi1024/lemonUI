@@ -8,13 +8,10 @@
           <p>基于 VUE3 和 TypeScript 的轻量级 UI 框架</p>
           <div class="links">
             <router-link to="/docs/started">查看文档</router-link>
-            | 
+            
             <a href="https://github.com/Demi1024/lemonUI">Github</a>
           </div>
         </div>
-        <article>
-          there is some one who will use
-        </article>
       </section>
     </main>
     <bottom-footer></bottom-footer>
@@ -64,23 +61,23 @@ export default {
       color: #fbfd8a;
     }
     p{
+      margin: 1rem 0;
       font-size: 2rem;
       color:#ffffff;
-      text-align: center;
     }
     .links{
       margin: 20px 0;
       a{
+        color:#333;
         margin:0 10px;
-        background:#ffffff;
         display: inline-block;
         $h:30px;
         height:$h;
         line-height: $h;
         border-radius: calc($h/2);
         padding:0 10px;
-        &:active{
-          color:#36D1DC;
+        &:active,&:hover{
+          color:#ccc;
         }
       }
     }
