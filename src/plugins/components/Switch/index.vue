@@ -1,8 +1,7 @@
 <template>
   <button :class="classes" @click="toggle">
     <span :class="innerClass">
-        <slot name="open" v-if="currentValue.value === trueValue"></slot>
-        <slot name="close" v-if="currentValue.value === falseValue"></slot>
+        <slot name="label"></slot>
     </span>
   </button>
 </template>
@@ -42,7 +41,7 @@ import { computed,SetupContext } from 'vue'
       const innerClass = computed(()=> `${prefixCls}-inner`)
       const toggle = ()=>{
         const checked = currentValue.value === props.trueValue ? props.falseValue : props.trueValue;
-        context.emit('update:value',checked)
+        context.emit('update:value',checked);
       }
       return{currentValue,trueValue,falseValue,classes,innerClass,toggle}
     }
@@ -54,7 +53,7 @@ import { computed,SetupContext } from 'vue'
   $height2:$height - 4px;
   .limo-switch{
     position: relative;
-    width:$height*2;
+    min-width:$height*2;
     height: $height;
     background: #cccccc;
     border-radius: calc($height/2);

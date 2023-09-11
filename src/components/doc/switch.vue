@@ -7,13 +7,12 @@
     </div>
     <div>
       <p>自定义值</p>
-      <le-switch v-model:value="testShowLabel" trueValue="yes" falseValue="no"></le-switch>{{testShowLabel}}
+      <le-switch v-model:value="testShowLabel" trueValue="yes" falseValue="no"></le-switch><span>选中的值{{testShowLabel}}</span>
     </div>
     <div>
       <p>自定义文字</p>
-      <le-switch v-model:value="testShowLabel" trueValue="yes" falseValue="no">
-        <template v-slot:open>开</template>c
-        <template v-slot:close>关</template>
+      <le-switch v-model:value="testCustomLabel" trueValue="yes" falseValue="no">
+        <template #label><span v-if="testCustomLabel ==='yes'">打开</span><span v-else>关闭</span></template>
       </le-switch>
     </div>
     
@@ -29,8 +28,9 @@ export default {
   },
   setup(){
     const testDefault = ref(false)
-    const testShowLabel = ref('yes')
-    return{testDefault,testShowLabel}
+    const testShowLabel = ref('yes');
+    const testCustomLabel = ref('yes');
+    return{testDefault,testShowLabel,testCustomLabel}
   }
 }
 </script>
