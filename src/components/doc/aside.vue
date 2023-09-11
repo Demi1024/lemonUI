@@ -1,6 +1,6 @@
 <template>
   <aside class="aside" v-if="asideVisible">
-    <menu-tree :Menu=Menu :selectedKey.sync="selectedKey" @update:selectedKey="changeSelectedKey"></menu-tree>
+    <menu-tree :Menu=Menu v-model:selectedKey.sync="selectedKey" @update:selectedKey="changeSelectedKey"></menu-tree>
   </aside>
 </template>
 <script lang="ts">
