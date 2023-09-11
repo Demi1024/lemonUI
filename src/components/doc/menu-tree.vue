@@ -7,7 +7,7 @@
       {'menu-available':item.path}
       ]"
         v-on:click="changeDocs(item.key,item.path)">{{item.label}}</p>
-      <menu-tree v-if="item.children" :Menu="item.children" v-model:selectedKey.sync="selectedKey" @update:selectedKey="updateKey"></menu-tree>
+      <menu-tree v-if="item.children" :Menu="item.children" :selectedKey="selectedKey" @update:selectedKey="updateKey"></menu-tree>
     </li>
   </ul>
   
