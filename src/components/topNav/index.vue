@@ -1,5 +1,5 @@
 <template>
-  <nav>
+  <header class="nav">
     <span class="toggle"  @click="toggleVisible">LOGO</span>
     <div class="logo">
       <router-link to="/"><svg-icon name="logo" class="logo-size"></svg-icon>柠檬 UI</router-link>
@@ -8,7 +8,7 @@
       <li><router-link to="/docs/started">文档</router-link></li>
       <li>语言</li>
     </ul>
-  </nav>
+  </header>
 </template>
 <script lang="ts">
 import { inject, Ref } from 'vue'
@@ -26,14 +26,20 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-nav{
-  position:relative;
+.nav{
+  position:sticky;
+  top:0;
+  z-index: 1000;
+  max-width: 100%;
+  background: #ffffff;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.03), 0 1px 6px -1px rgba(0, 0, 0, 0.02), 0 2px 4px 0 rgba(0, 0, 0, 0.02);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
   padding: 16px 0;
   border-bottom:1px solid #cccccc;
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 3;
   > .toggle{
     position: absolute;
     left:16px;

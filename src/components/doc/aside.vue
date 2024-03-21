@@ -26,9 +26,13 @@ export default {
 </script>
 <style lang="scss" scoped>
 .aside{
-  max-width: 200px;
+  position:sticky;
+  top:55px;
   width:100% ;
-  background: #ffffff;
+  height:100%;
+  max-height: calc(100vh - 56px);
+  background: #f1f1f1;
+  overflow: hidden;
   z-index: 2;
   }
   @media (max-width:600px) {
