@@ -8,7 +8,11 @@
 
 <script lang="ts">
 const prefixCls = 'limo-switch'
-import { computed,SetupContext } from 'vue'
+import { computed,SetupContext } from 'vue';
+interface CustomSetupContext {
+  emit: (event: string, ...args: any[]) => void;
+  expose: <Exposed extends Record<string, any> = Record<string, any>>(exposed?: Exposed | undefined) => void;
+}
   export default {
     name: 'Switch',
     props:{
@@ -25,7 +29,7 @@ import { computed,SetupContext } from 'vue'
         default:false
       }
     },
-    setup(props:any,context:SetupContext<Record<string, any>>){
+    setup(props,context:SetupContext<Record<string, CustomSetupContext>>){
       // 计算属性会挂载ref的属性和effect
       const currentValue = computed(()=> props.value)
       const trueValue = props.trueValue
