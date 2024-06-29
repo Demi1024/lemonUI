@@ -37,6 +37,22 @@ importers:
         specifier: ^3.1.0
         version: 3.2.10(@types/node@18.19.39)(sass@1.77.6)
 
+  packages/ui:
+    dependencies:
+      vue:
+        specifier: ^3.4.30
+        version: 3.4.31(typescript@4.9.5)
+    devDependencies:
+      '@types/node':
+        specifier: ^18.7.18
+        version: 18.19.39
+      sass:
+        specifier: ^1.26.10
+        version: 1.77.6
+      typescript:
+        specifier: ^4.6.4
+        version: 4.9.5
+
 packages:
 
   '@babel/helper-string-parser@7.24.7':

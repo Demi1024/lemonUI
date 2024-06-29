@@ -1,4 +1,4 @@
-import './plugins/style/index.scss'
+import '~/style/index.scss'
 import './styles/common/index.scss'
 import 'highlight.js/styles/monokai-sublime.css'
 import { createApp } from 'vue'

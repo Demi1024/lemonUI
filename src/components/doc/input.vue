@@ -25,7 +25,7 @@
   </article>
 </template>
 <script lang="ts">
-import Input from '@/plugins/components/Input/index.vue';
+import Input from '~/components/Input/index.vue';
 import '@/styles/components/docs.scss'
 export default {
   name:'InputContent',

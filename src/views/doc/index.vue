@@ -22,7 +22,7 @@
 import TopNav from '@/components/topNav/index.vue'
 import Footer from '@/components/pageFooter/index.vue'
 import DocAside from '@/components/doc/aside.vue'
-import Col from '@/plugins/components/Col/index.vue';
+import Col from '~/components/Col/index.vue';
 export default {
   components: {
     'top-nav':TopNav,

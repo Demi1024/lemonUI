@@ -19,7 +19,7 @@
   </article>
 </template>
 <script lang="ts">
-import Switch from '@/plugins/components/Switch/index.vue';
+import Switch from '~/components/Switch/index.vue';
 import { ref } from 'vue'
 export default {
   name:'SwitchContent',
