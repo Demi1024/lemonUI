@@ -9,7 +9,6 @@
   </button>
 </template>
 <script lang="ts">
-import '../../style/index.scss'
 import {computed} from 'vue'
 const prefixCls = 'limo-button'
 export default{

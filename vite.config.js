@@ -22,5 +22,13 @@ export default defineConfig({
       '@':path.resolve(__dirname,'./src'),
       '~':path.resolve(__dirname,'./packages/ui/src'),
     }
+  },
+  css:{
+    preprocessorOptions:{
+      scss:{
+        additionalData: '@import "~/styles/index.scss";',
+      }
+    }
   }
+  
 })
