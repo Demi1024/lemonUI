@@ -1,4 +1,4 @@
-import './styles/common/index.scss';
+import './styles/common/index.css';
 import 'highlight.js/styles/monokai-sublime.css'
 import { createApp } from 'vue'
 import router from './router'

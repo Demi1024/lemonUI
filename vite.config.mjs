@@ -5,11 +5,16 @@ import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import {createSvg} from './src/utils/svg';
 import path from 'path';
+import tailwindcss from '@tailwindcss/vite'
 
 const BASE_URL = '/lemonUI/'
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [vue(),createSvg('./src/assets/icons/svg/')],
+  plugins: [
+    vue(),
+    createSvg('./src/assets/icons/svg/'),
+    tailwindcss(),
+ ],
   base:BASE_URL,
   preview:{
     open:true
@@ -30,5 +35,4 @@ export default defineConfig({
       }
     }
   }
-  
 })
