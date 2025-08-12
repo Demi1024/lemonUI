@@ -54,6 +54,11 @@ export default {
     padding-left:20px;
     a{
       color:#515a6e;
+      display: flex;
+      align-items: center;
+      &:hover{
+        color:#01a9b4;
+      }
     }
     .logo-size{
       margin-right:5px;
