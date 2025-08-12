@@ -6,7 +6,8 @@
 <script lang="ts">
 import menu from './menu'
 import MenuTree from './menu-tree.vue'
-import { reactive,inject,Ref,ref } from 'vue'
+import { reactive,inject,Ref,ref,watch } from 'vue'
+import { useRoute } from 'vue-router'
 export default {
   name:'DocsAside',
   components:{
@@ -15,7 +16,29 @@ export default {
   setup(){
      const asideVisible = inject<Ref<boolean>>('asideVisible')
      const Menu = reactive(menu)
-     const selectedKey = ref('started');
+     const route = useRoute()
+     
+     // 根据路由路径获取对应的菜单键
+     const getKeyFromPath = (path: string): string => {
+       const pathToKeyMap: { [key: string]: string } = {
+         '/docs/started': 'started',
+         '/docs/icon': 'icon', 
+         '/docs/button': 'button',
+         '/docs/input': 'input',
+         '/docs/select': 'select',
+         '/docs/switch': 'switch',
+         '/docs/grid': 'grid',
+         '/docs/layout': 'layout'
+       }
+       return pathToKeyMap[path] || 'started'
+     }
+     
+     const selectedKey = ref(getKeyFromPath(route.path));
+
+     // 监听路由变化，同步更新 selectedKey
+     watch(() => route.path, (newPath) => {
+       selectedKey.value = getKeyFromPath(newPath)
+     })
 
      const changeSelectedKey = (key:string)=>{
       selectedKey.value = key
