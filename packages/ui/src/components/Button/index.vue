@@ -45,6 +45,8 @@ export default{
 }
 </script>
 <style lang="scss">
+@import '../../styles/variables.scss';
+
 .limo-button{
   align-items: center;
   border: 1px solid transparent;
@@ -59,116 +61,117 @@ export default{
   position: relative;
   vertical-align: top;
   transition: background .2s linear,color .2s linear;
+  cursor: pointer;
   &[disabled]{
     cursor: not-allowed;
-    color:#cccccc;
+    color: $grey-6;
     &:hover{
-      color:#cccccc;
-      border-color: #f4f5f6;
+      color: $grey-6;
+      border-color: $grey-3;
     }
   }
   &-default{
-    color:#515a6e;
-    background: #ffffff;
-    border-color: #f4f5f6;
+    color: $font-color-primary;
+    background: $grey-1;
+    border-color: $grey-3;
     &:hover{
-      background:#ffffff;
-      color:#016ab4;
-      border-color: #016ab4;
+      background: $grey-1;
+      color: $blue-7;
+      border-color: $blue-7;
     }
     &:focus{
       outline: none;
-      border-color: #016ab4;
+      border-color: $blue-7;
     }
   }
   &-primary{
-    color:#ffffff;
-    background: #016ab4;
+    color: $grey-1;
+    background: $blue-7;
     &:hover{
-      background:#1077bf;
-      color:#ffffff;
-      border-color: #1077bf;
+      background: $blue-6;
+      color: $grey-1;
+      border-color: $blue-6;
     }
     &:focus{
       outline: none;
-      border-color: #1077bf;
+      border-color: $blue-6;
     }
   }
   &-dashed{
-    color:#515a6e;
-    background: #ffffff;
-    border-color: #f4f5f6;
+    color: $font-color-primary;
+    background: $grey-1;
+    border-color: $grey-3;
     border-style: dashed;
     &:hover{
-      background:#ffffff;
-      color:#016ab4;
-      border-color: #016ab4;
+      background: $grey-1;
+      color: $blue-7;
+      border-color: $blue-7;
     }
     &:focus{
       outline: none;
-      border-color: #016ab4;
+      border-color: $blue-7;
     }
   }
   &-text{
     background: transparent;
-    color:#515a6e;
+    color: $font-color-primary;
     &:hover{
-      color:#016ab4;
+      color: $blue-7;
     }
     &:focus{
       outline: none;
     }
   }
   &-info{
-    color:#ffffff;
-    background: #01a9b4;
+    color: $grey-1;
+    background: $cyan-6;
     &:hover{
-      background:#07c2ce;
-      color:#ffffff;
-      border-color: #07c2ce;
+      background: $cyan-5;
+      color: $grey-1;
+      border-color: $cyan-5;
     }
     &:focus{
       outline: none;
-      border-color: #07c2ce;
+      border-color: $cyan-5;
     }
   }
   &-success{
-    color:#ffffff;
-    background: #17c123;
+    color: $grey-1;
+    background: $green-6;
     &:hover{
-      background:#19cd26;
-      color:#ffffff;
-      border-color: #19cd26;
+      background: $green-5;
+      color: $grey-1;
+      border-color: $green-5;
     }
     &:focus{
       outline: none;
-      border-color: #19cd26;
+      border-color: $green-5;
     }
   }
   &-warning{
-    color:#ffffff;
-    background: #df9d0e;
+    color: $grey-1;
+    background: $yellow-7;
     &:hover{
-      background:#e9a510;
-      color:#ffffff;
-      border-color: #e9a510;
+      background: $yellow-6;
+      color: $grey-1;
+      border-color: $yellow-6;
     }
     &:focus{
       outline: none;
-      border-color: #e9a510;
+      border-color: $yellow-6;
     }
   }
   &-error{
-    color:#ffffff;
-    background: #f2380d;
+    color: $grey-1;
+    background: $red-6;
     &:hover{
-      background:#f8451b;
-      color:#ffffff;
-      border-color: #f8451b;
+      background: $red-5;
+      color: $grey-1;
+      border-color: $red-5;
     }
     &:focus{
       outline: none;
-      border-color: #f8451b;
+      border-color: $red-5;
     }
   }
   &.limo-size-large {
@@ -186,7 +189,7 @@ export default{
     display: inline-block;
     margin-right: 4px;
     border-radius: 8px; 
-    border-color: #cccccc #cccccc #cccccc transparent;
+    border-color: $grey-6 $grey-6 $grey-6 transparent;
     border-style: solid;
     border-width: 2px;
     animation: limo-spin 1s infinite linear;
