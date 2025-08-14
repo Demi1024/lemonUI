@@ -1,5 +1,6 @@
 <template>
-  <header class="nav">
+  <header class="sticky top-0 z-100 h-[57px]">
+    <div class="nav">
     <span class="toggle"  @click="toggleVisible">LOGO</span>
     <div class="logo">
       <router-link to="/"><svg-icon name="logo" class="logo-size"></svg-icon>柠檬 UI</router-link>
@@ -8,6 +9,7 @@
       <li><router-link to="/docs/started">文档</router-link></li>
       <li>语言</li>
     </ul>
+  </div>
   </header>
 </template>
 <script lang="ts">
@@ -27,9 +29,7 @@ export default {
 </script>
 <style lang="scss" scoped>
 .nav{
-  position:sticky;
-  top:0;
-  z-index: 1000;
+  position:relative;
   max-width: 100%;
   background: #ffffff;
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.03), 0 1px 6px -1px rgba(0, 0, 0, 0.02), 0 2px 4px 0 rgba(0, 0, 0, 0.02);

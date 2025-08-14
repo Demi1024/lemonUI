@@ -1,5 +1,5 @@
 <template>
-  <footer>
+  <footer class="text-gray-500">
     <p>技术支持 By Demi</p>
     <p>联系我：demi1024w@126.com</p>
   </footer>
@@ -11,7 +11,5 @@ footer{
     width: 100%;
     margin:0 auto;
     text-align: center;
-    background: #333333;
-    color: #f2f2f2;
   }
 </style>
