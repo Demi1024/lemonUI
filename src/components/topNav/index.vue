@@ -27,10 +27,8 @@ export default {
 </script>
 <style lang="scss" scoped>
 .nav{
-  position:fixed;
+  position:sticky;
   top:0;
-  left:0;
-  right:0;
   z-index: 1000;
   max-width: 100%;
   background: #ffffff;

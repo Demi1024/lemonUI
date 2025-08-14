@@ -1,115 +1,152 @@
 <template>
-  <div :class="classes">
+  <div :class="classes" :style="colStyle">
     <slot></slot>
   </div>
 </template>
 <script lang="ts">
-import {computed} from 'vue'
-const prefixCls = 'limo-col';
+import { computed, inject, PropType } from 'vue'
+
+const prefixCls = 'limo-col'
+
+type SpanType = number
+type GutterType = number | [number, number]
+
+interface ColProps {
+  span: SpanType
+  offset: number
+  push: number
+  pull: number
+  order: number
+}
+
 export default {
-  name:'Col',
-  props:{
-    span:{
-      type:Number,
-      default:24
+  name: 'Col',
+  props: {
+    span: {
+      type: Number as PropType<SpanType>,
+      default: 24,
+      validator: (value: number) => value >= 0 && value <= 24
+    },
+    offset: {
+      type: Number,
+      default: 0,
+      validator: (value: number) => value >= 0 && value <= 24
+    },
+    push: {
+      type: Number,
+      default: 0,
+      validator: (value: number) => value >= 0 && value <= 24
+    },
+    pull: {
+      type: Number,
+      default: 0,
+      validator: (value: number) => value >= 0 && value <= 24
+    },
+    order: {
+      type: Number,
+      default: 0
     }
   },
-  setup(props:any){
-    const {span} = props
-    const classes = computed(()=>{
-                return [
-                  `${prefixCls}`,
-                  {[`${prefixCls}-${span}`]:span}
-                ]
-                
-            })
-    return{classes}
+  setup(props: ColProps) {
+    const { span, offset, push, pull, order } = props
+    
+    // 从父组件 Row 获取 gutter
+    const gutter = inject('rowGutter', 0)
+
+    const classes = computed(() => {
+      return [
+        prefixCls,
+        {
+          [`${prefixCls}-${span}`]: span !== undefined,
+          [`${prefixCls}-offset-${offset}`]: offset && offset > 0,
+          [`${prefixCls}-push-${push}`]: push && push > 0,
+          [`${prefixCls}-pull-${pull}`]: pull && pull > 0,
+          [`${prefixCls}-order-${order}`]: order !== 0
+        }
+      ]
+    })
+
+    const colStyle = computed(() => {
+      const styles: any = {}
+      
+      // 处理 gutter 间距
+      if (gutter) {
+        const gutterValue = Array.isArray(gutter) ? gutter[0] : gutter
+        if (gutterValue > 0) {
+          styles.paddingLeft = `${gutterValue / 2}px`
+          styles.paddingRight = `${gutterValue / 2}px`
+        }
+      }
+      
+      // 处理 order
+      if (order !== 0) {
+        styles.order = order
+      }
+      
+      return styles
+    })
+
+    return {
+      classes,
+      colStyle
+    }
   }
 }
 </script>
 <style lang="scss">
-.limo-col{
+@import '../../styles/variables.scss';
+
+// Grid 系统配置
+$grid-columns: 24;
+
+.limo-col {
   position: relative;
+  max-width: 100%;
   min-height: 1px;
-  display: block;
-  box-sizing: border-box;
-  &-1{
-    width: 4.1666667%;
+  flex: 0 0 auto;
+  
+  // 使用 SCSS 循环生成 span 样式
+  @for $i from 0 through $grid-columns {
+    &-#{$i} {
+      display: block;
+      flex: 0 0 percentage($i / $grid-columns);
+      max-width: percentage($i / $grid-columns);
+    }
   }
-  &-2{
-    width: 8.3333333%;
+  
+  // 使用 SCSS 循环生成 offset 样式
+  @for $i from 0 through $grid-columns {
+    &-offset-#{$i} {
+      margin-left: percentage($i / $grid-columns);
+    }
   }
-  &-3{
-    width: 12.5%;
+  
+  // 使用 SCSS 循环生成 push 样式
+  @for $i from 0 through $grid-columns {
+    &-push-#{$i} {
+      left: percentage($i / $grid-columns);
+    }
   }
-  &-4{
-    width: 16.666667%;
+  
+  // 使用 SCSS 循环生成 pull 样式
+  @for $i from 0 through $grid-columns {
+    &-pull-#{$i} {
+      right: percentage($i / $grid-columns);
+    }
   }
-  &-5{
-    width: 20.833333%;
-  }
-  &-6{
-    width: 25%;
-  }
-  &-7{
-    width: 29.166667%;
-  }
-  &-8{
-    width: 33.333333%;
-  }
-  &-9{
-    width: 37.5%;
-  }
-  &-10{
-    width: 41.666667%;
-  }
-  &-11{
-    width: 45.833333%;
-  }
-  &-12{
-    width: 50%;
-  }
-  &-13{
-    width: 54.166667%;
-  }
-  &-14{
-    width: 58.333333%;
-  }
-  &-15{
-    width: 62.5%;
-  }
-  &-16{
-    width: 66.666667%;
-  }
-  &-17{
-    width: 70.833333%;
-  }
-  &-18{
-    width: 75%;
-  }
-  &-19{
-    width: 79.166667%;
-  }
-  &-20{
-    width: 83.333333%;
-  }
-  &-21{
-    width: 87.5%;
-  }
-  &-22{
-    width: 91.666667%;
-  }
-  &-23{
-    width: 95.833333%;
-  }
-  &-24{
-    width:100%;
+  
+  // Order 样式
+  &-order {
+    @for $i from -1 through 10 {
+      &-#{$i} {
+        order: $i;
+      }
+    }
   }
 }
-.limo-col-1, .limo-col-2, .limo-col-3, .limo-col-4, .limo-col-5, .limo-col-6, .limo-col-7, .limo-col-8, .limo-col-9, .limo-col-10, .limo-col-11, .limo-col-12, .limo-col-13, .limo-col-14, .limo-col-15, .limo-col-16, .limo-col-17, .limo-col-18, .limo-col-19, .limo-col-20, .limo-col-21, .limo-col-22, .limo-col-23, .limo-col-24{
-  flex: 0 0 auto;
-  -webkit-box-flex: 0;
-  -ms-flex: 0 0 auto;
-  float: left;
+
+// 特殊情况：span 为 0 时隐藏
+.limo-col-0 {
+  display: none;
 }
 </style>
