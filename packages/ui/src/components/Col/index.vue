@@ -109,29 +109,29 @@ $grid-columns: 24;
   @for $i from 0 through $grid-columns {
     &-#{$i} {
       display: block;
-      flex: 0 0 percentage($i / $grid-columns);
-      max-width: percentage($i / $grid-columns);
+      flex: 0 0 ($i / $grid-columns) * 100%;
+      max-width: ($i / $grid-columns) * 100%;
     }
   }
   
   // 使用 SCSS 循环生成 offset 样式
   @for $i from 0 through $grid-columns {
     &-offset-#{$i} {
-      margin-left: percentage($i / $grid-columns);
+      margin-left: ($i / $grid-columns) * 100%;
     }
   }
   
   // 使用 SCSS 循环生成 push 样式
   @for $i from 0 through $grid-columns {
     &-push-#{$i} {
-      left: percentage($i / $grid-columns);
+      left: ($i / $grid-columns) * 100%;
     }
   }
   
   // 使用 SCSS 循环生成 pull 样式
   @for $i from 0 through $grid-columns {
     &-pull-#{$i} {
-      right: percentage($i / $grid-columns);
+      right: ($i / $grid-columns) * 100%;
     }
   }
   

@@ -37,17 +37,16 @@ export default {
   background: #f1f1f1;
   
   > main{
-    height: calc(100vh - 57px);
     
     .main-row{
-      height: 100%;
       margin: 0 !important; // 移除栅格系统默认边距
       
       .content{
-        height: 100%;
+        min-height: calc(100vh - 77px);
         display: flex;
         flex-direction: column;
         padding: 20px;
+        margin:10px 0;
         border-radius: 10px;
         background: #ffffff;
         overflow-y: auto; // 添加滚动处理
